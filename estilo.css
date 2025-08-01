@@ -1,0 +1,795 @@
+/* Esconde o menu hamburguer fora do mobile */
+#menu-hamburguer {
+    display: none;
+}
+
+a[href*="Jacbus"] {
+    color: var(--cor-fonte-principal) !important;
+    text-decoration: underline;
+    font-weight: bold;
+}
+:root {
+    --fonte-principal: 'Cormorant Garamond', serif;
+    --cor-fundo-darkmode: #212842; /* Fundo escuro para o modo dark */
+    --cor-fundo: #F0E7D5; /* Bege claro */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-fonte-principal);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
+    font-family: var(--fonte-principal);
+    line-height: 1.6; /* Melhora a legibilidade */
+    letter-spacing: 0.5px; /* Sutil espaçamento entre letras */
+}
+
+.btn-topo {
+    align-items: center;
+    display: none; /* Esconde o botão inicialmente */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    padding: 16px 20px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: none;
+    background: var(--cor-fundo-darkmode);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.btn-topo-imagem {
+    width: 30px; /* Ajusta o tamanho do ícone */
+    height: 30px; /* Ajusta o tamanho do ícone */
+}
+
+.barra-nav {
+    background-color: var(--cor-fundo-darkmode);
+    display: flex;
+    justify-content: right;
+    gap: 20px; /* Aumenta o espaçamento entre os itens */
+    padding: 30px 30px; /* Adiciona um pouco de padding */
+    margin-right: 80px;
+    border-radius: 7px;
+}
+
+.menu{
+    background:none;
+    color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid var(--cor-fundo);
+}
+
+.menu:hover {
+    cursor: pointer;
+    border-bottom:none;
+}
+
+.menu-contato {
+    background:none;
+    color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    border-bottom: 2px solid var(--cor-fundo);
+    margin-left: 15px;
+}   
+.menu-contato:hover {
+    cursor: pointer;
+    border-bottom:none;
+}
+
+.menu-link {
+    color: var(--cor-fundo);
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+.menu-link:hover {
+    text-decoration: none; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.modo-escuro{
+    width: 64px;
+    height: 94px;
+    border-radius: 10%;
+    background-color: var(--cor-fundo-darkmode);
+    position: absolute;
+    top: 1px; 
+    right:10px; 
+}
+.modo-escuro:hover {
+    cursor: pointer;
+    background-color: #8A9AC6;
+    border: #8A9AC6 1px solid;
+}
+
+.modo-escuro-imagem {
+    object-fit: cover;
+    width: 60px;
+    height: 60px;
+}
+
+.apresentacao{
+    display: flex;
+    padding: 50px 40px; /* Aumenta o padding */
+    margin: 70px auto; /* Ajusta a margem */
+    text-align: center;
+   flex-direction: column;
+}
+
+.apresentacao-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 220px;
+    gap: 16px;
+}
+
+.apresentacao-titulo {
+    color: var(--cor-fundo-darkmode);
+    font-size: 40px; /* Aumenta o tamanho da fonte */
+    font-weight: 800;
+    margin-top: 100px;
+    width: 60%;
+    margin-bottom: 0;
+    border-bottom: 3px solid var(--cor-fundo-darkmode); /* Linha de destaque */
+    padding-bottom: 10px; /* Espaçamento da linha */
+}
+
+.apresentacao-texto {
+    color: var(--cor-fundo-darkmode);
+    font-size: 25px; /* Aumenta o tamanho da fonte */
+    text-align: left;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.apresentacao-foto {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+}
+
+.Projetos {
+    font-size: 20px;
+    padding: 50px 40px; /* Aumenta o padding */
+    max-width: 900px; /* Aumenta a largura máxima para os projetos */
+    margin: 150px auto; /* Ajusta a margem */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Projetos-titulo {
+    font-size: 40px; 
+    font-weight: 800;
+    color: var(--cor-fundo-darkmode);
+    text-align: left; /* Centraliza o título */
+    border-bottom: solid 3px var(--cor-fundo-darkmode); /* Linha de destaque */
+    margin-bottom: 15px; /* Mais espaço abaixo do título */
+    color: var(--cor-fonte-principal);
+    width: 50%; /* Garante que o título ocupe a largura total */
+}
+
+.Projetos-texto {
+    font-size: 25px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--cor-fundo-darkmode);
+}
+
+.projetos-apresentacao {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os projetos quebrem a linha */
+    justify-content: space-around; /* Centraliza os projetos */
+    gap: 80px; /* Aumenta o espaçamento entre os projetos */
+    margin-top: 30px;
+}
+
+.projeto {
+    margin-top: 20px;
+    background: var(--cor-fundo-darkmode);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para cada projeto */
+    padding: 25px;
+    width: 1000px; /* Largura fixa para cada projeto */
+    text-align: left;
+    transition: transform 0.3s ease-in-out; /* Efeito de hover */
+}
+
+.projeto:hover {
+    transform: translateY(-10px); /* Levanta o projeto ao passar o mouse */
+}
+
+.projeto-nome {
+    font-size: 30px; /* Aumenta o tamanho do nome do projeto */
+    font-weight: 700; /* Deixa o nome mais destacado */
+    color: var(--cor-fundo);
+    margin-bottom: 10px; /* Espaço abaixo do nome do projeto */
+}
+
+.projeto-texto{
+    line-height: 1.5;
+    color: var(--cor-fundo);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.link-projeto{
+    color: var(--cor-fundo);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+a{
+    color: var(--cor-fundo);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.projeto-imagens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.projeto-imagem {
+    width: 200px; /* Largura fixa para as imagens */
+    height: 400px; /* Altura fixa para as imagens */
+    border-radius: 10px; /* Borda arredondada para as imagens */
+    margin-top: 15px; /* Espaço entre o texto e a imagem */
+}
+
+.projeto-imagens-aluramed {
+    display: flex;
+    flex-direction: column; /* Coloca as imagens em coluna */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.projeto-imagem-persona {
+    width: 680px; /* Largura fixa para as imagens */
+    height: 430px; /* Altura fixa para as imagens */
+    border-radius: 10px; /* Borda arredondada para as imagens */
+    margin-top: 15px; /* Espaço entre o texto e a imagem */
+}
+
+.projeto-imagem-double-diamond {
+    width: 800px; /* Largura fixa para as imagens */
+    height: 400px; /* Altura fixa para as imagens */
+    border-radius: 10px; /* Borda arredondada para as imagens */
+    margin-top: 15px; /* Espaço entre o texto e a imagem */
+}
+
+.minhas-habilidades {
+    font-size: 20px;
+    padding: 50px 40px; /* Aumenta o padding */
+    max-width: 900px; /* Aumenta a largura máxima */
+    margin: 150px auto; /* Ajusta a margem */
+}
+
+.minhas-habilidades-titulo {
+    font-size: 40px; 
+    font-weight: 800;
+    color: var(--cor-fundo-darkmode);
+    text-align: left; /* Centraliza o título */
+    border-bottom: solid 3px var(--cor-fundo-darkmode); /* Linha de destaque */
+    margin-bottom: 15px; /* Mais espaço abaixo do título */
+    color: var(--cor-fonte-principal);
+    width: 50%; /* Garante que o título ocupe a largura total */
+}
+
+.habilidades-lista {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex;
+    flex-direction: column; /* Permite que os itens quebrem a linha */
+    justify-content: center; /* Centraliza os itens */
+    gap: 10px; /* Espaçamento entre os itens da lista */
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.habilidade-item {
+    background: var(--cor-fundo-darkmode);
+    color: var(--cor-fundo);
+    padding: 10px 20px; /* Adiciona padding para espaçamento interno */
+    border-radius: 10px; /* Borda arredondada para os itens da lista */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para cada item */
+}
+
+.sobre-mim {
+    font-size: 18px;
+    padding: 40px 50px; /* Aumenta o padding */
+    margin: 80px auto; /* Centraliza e adiciona margem superior/inferior */
+    text-align: left;
+    background: var(--cor-fundo-darkmode);
+    border-radius: 20px; /* Borda mais arredondada */
+    max-width: 900px; /* Aumenta a largura máxima */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2); /* Sombra mais proeminente */
+    z-index: 1;
+    position: relative;
+}
+
+.sobre-mim-titulo {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--cor-fundo);
+    border-bottom: 2px solid var(--cor-fundo); /* Linha de destaque */
+    padding-bottom: 8px;
+}
+
+.sobre-mim-texto {
+    color: var(--cor-fundo);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.8; /* Melhora a legibilidade de textos longos */
+}
+
+.contato{
+    padding: 50px 40px; /* Aumenta o padding */
+    max-width: 900px; /* Aumenta a largura máxima */
+    margin: 150px auto; /* Ajusta a margem */
+    text-align: center;
+}
+
+.contato-titulo {
+    font-size: 40px; 
+    font-weight: 800;
+    color: var(--cor-fundo-darkmode);
+    text-align: left; /* Centraliza o título */
+    border-bottom: solid 3px var(--cor-fundo-darkmode); /* Linha de destaque */
+    margin-bottom: 15px; /* Mais espaço abaixo do título */
+    color: var(--cor-fonte-principal);
+    width: 50%; /* Garante que o título ocupe a largura total */
+}
+
+.contato-texto {
+    font-size: 25px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--cor-fundo-darkmode);
+}
+
+.contato-lista {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex;
+    flex-direction: column; /* Permite que os itens quebrem a linha */
+    justify-content: center; /* Centraliza os itens */
+    gap: 10px; /* Espaçamento entre os itens da lista */
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contato-item {
+    text-align: left;
+    width: 30%; /* Garante que a lista ocupe a largura total */
+    background: var(--cor-fundo-darkmode);
+    color: var(--cor-fundo);
+    padding: 10px 20px; /* Adiciona padding para espaçamento interno */
+    border-radius: 10px; /* Borda arredondada para os itens da lista */
+    box-shadow: 0 4px 12px rgba(255,255,255,0.15); /* Sombra para cada item */
+}
+
+.footer-vericidade {
+    width: 100%;
+    background: var(--cor-fundo);
+    padding: 24px 0 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    border-top: 1px solid var(--cor-fundo-darkmode);
+    position: relative;
+    z-index: 2;
+}
+
+.celo-texto {
+    font-family: var(--fonte-principal);
+    color: var(--cor-fundo-darkmode);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+@media screen and (max-width: 412px) { /* Ajusta o layout para telas menores */
+    #menu-hamburguer {
+        display: block !important;
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        z-index: 2100;
+        background: none;
+        border: none;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        cursor: pointer;
+    }
+    #menu-hamburguer img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    /* Overlay para escurecer o fundo quando o menu está aberto */
+    #overlay-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2099;
+    }
+    #overlay-menu.ativo {
+        display: block;
+    }
+    .barra-nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 72vw;
+        min-width: 120px;
+        max-width: 260px;
+        background-color: var(--cor-fundo-darkmode);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 32px 0 0 0;
+        margin: 0;
+        border-radius: 0 12px 12px 0;
+        gap: 0;
+        z-index: 2200;
+        box-shadow: 2px 0 12px rgba(0,0,0,0.12);
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+        display: flex;
+    }
+    .menu {
+        color: var(--cor-fundo);
+        font-size: 25px;
+        font-weight: 600;
+        border: none;
+        border-bottom: 1px solid var(--cor-fundo);
+        width: 80%;
+        text-align: left;
+        padding: 10px 20px;
+        gap: 5px; /* Espaçamento entre os itens do menu */
+        margin-left: 20px; /* Espaço à esquerda do menu */
+    }
+
+    .menu-contato {
+        color: var(--cor-fundo);
+        font-size: 25px;
+        font-weight: 600;
+        border: none;
+        border-bottom: 1px solid var(--cor-fundo);
+        width: 80%;
+        text-align: left;
+        padding: 10px 20px;
+        gap: 5px; /* Espaçamento entre os itens do menu */
+        margin-left: 20px; /* Espaço à esquerda do menu */
+    }
+
+    .modo-escuro {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--cor-fundo-darkmode);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .modo-escuro:hover {
+        cursor: pointer;
+        background-color: #8A9AC6; /* Cor de hover mais clara */
+        border: none; /* Remove a borda no hover */
+    }
+    .barra-nav.menu-aberto {
+        transform: translateX(0);
+        box-shadow: 2px 0 24px rgba(0,0,0,0.18);
+    }
+    /* Remove display:none da barra-nav no mobile */
+    /* Remove display:block do menu hamburguer no dark-mode, já está garantido acima */
+
+    .apresentacao-titulo {
+        color: var(--cor-fundo-darkmode);
+        font-size: 30px; /* Ajusta o tamanho da fonte */
+        margin-left: 20px; /* Ajusta a margem esquerda */
+        width: 80%; /* Garante que o título ocupe a largura total */
+    }
+    .apresentacao-texto {
+        color: var(--cor-fundo-darkmode);
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+        width: 80%; /* Garante que o texto ocupe a largura total */
+        margin-left: 20px; /* Ajusta a margem esquerda */
+        text-align: justify;
+    }
+    .Projetos{
+        margin: 80px auto; /* Ajusta a margem */
+    }
+    .Projetos-texto {
+        font-size: 25px; /* Ajusta o tamanho da fonte */
+        text-align: left;
+        font-weight: 700;
+        color: var(--cor-fundo-darkmode);
+        width: 80%; /* Garante que o texto ocupe a largura total */
+        margin-left: 15px; /* Ajusta a margem esquerda */
+    }
+    .projetos-apresentacao {
+        flex-direction: column; /* Coloca os projetos em coluna */
+        align-items: center; /* Centraliza os projetos */
+        gap: 20px; /* Aumenta o espaçamento entre os projetos */
+    }
+    .projeto {
+        width: 350px; /* Largura responsiva para os projetos */
+        padding: 20px; /* Ajusta o padding */
+        margin: 10px 0; /* Espaço entre os projetos */
+    }
+    .projeto-imagens{
+        flex-direction: column; /* Coloca as imagens em coluna */
+        align-items: center; /* Centraliza as imagens */
+        gap: 10px; 
+    }
+    .projeto-imagem {
+        width: 400px; 
+        border-radius: 15px;
+    }
+    .projeto-imagem-persona {
+        width: 350px; /* Largura responsiva para as imagens */
+        height: auto; /* Altura automática para manter a proporção */
+    }
+    .projeto-imagem-double-diamond {
+        width: 350px; /* Largura responsiva para as imagens */
+        height: auto; /* Altura automática para manter a proporção */
+    }
+    .sobre-mim-texto {
+        color: var(--cor-fundo);
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+        width: 90%; /* Garante que o texto ocupe a largura total */
+        margin-left: 20px; /* Ajusta a margem esquerda */
+        text-align: left;
+    }
+    .contato-texto{
+        color: var(--cor-fundo-darkmode);
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+        width: 90%; /* Garante que o texto ocupe a largura total */
+        text-align: left;
+    }
+    .contato-item {
+        width: 80%; /* Garante que a lista ocupe a largura total */
+        margin: 10px auto; /* Centraliza os itens */
+    }
+    .celo-texto {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        color: var(--cor-fundo-darkmode);
+    }
+    body.dark-mode #menu-hamburguer {
+        display: block !important;
+        background-color: var(--cor-fundo);
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(255, 255, 255, 0.278);
+    }
+}
+
+/* Remove display:none da barra-nav no mobile, pois o JS controla a exibição */
+body.dark-mode {
+    color: var(--cor-fonte-principal); /* Garante que a fonte mude */
+    background-color: var(--cor-fundo-darkmode); /* Garante que o fundo mude */
+}
+
+body.dark-mode .barra-nav{
+    background-color: var(--cor-fundo);
+}
+
+body.dark-mode .btn-topo {
+    background: var(--cor-fundo-darkmode);
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.278); /* Sombra mais clara */
+}
+body.dark-mode .btn-topo:hover {
+    background: #8A9AC6;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.278); /* Sombra mais clara */
+}
+
+body.dark-mode .menu {
+    color: var(--cor-fundo-darkmode); /* Muda a cor do texto no modo dark */
+    border-bottom: 2px solid var(--cor-fundo-darkmode); /* Linha de destaque */
+}
+
+body.dark-mode .menu:hover {
+    cursor: pointer;
+    border-bottom: none; /* Remove a linha de destaque no hover */
+}
+
+body.dark-mode .menu-contato {
+    color: var(--cor-fundo-darkmode); /* Muda a cor do texto no modo dark */
+    border-bottom: 2px solid var(--cor-fundo-darkmode); /* Linha de destaque */
+}
+body.dark-mode .menu-contato:hover {
+    cursor: pointer;
+    border-bottom: none; /* Remove a linha de destaque no hover */
+}
+body.dark-mode .menu-link {
+    color: var(--cor-fundo-darkmode); /* Muda a cor do link no modo dark */
+}
+
+body.dark-mode .modo-escuro {
+    background-color: var(--cor-fundo-darkmode);
+    border: none;
+}
+
+body.dark-mode .modo-escuro:hover {
+    cursor: pointer;
+    background-color: #8A9AC6; /* Cor de hover mais clara */
+    border: none; /* Remove a borda no hover */
+} 
+
+body.dark-mode .apresentacao-titulo {
+    color: var(--cor-fundo);
+    border-bottom-color: var(--cor-fundo);
+}
+
+body.dark-mode .apresentacao-texto {
+    color: var(--cor-fundo);
+}
+
+body.dark-mode .Projetos-titulo {
+    color: var(--cor-fundo);
+    border-bottom: solid 3px var(--cor-fundo);
+}
+body.dark-mode .Projetos-texto {
+    color: var(--cor-fundo);
+}
+
+body.dark-mode .projeto {
+    background: var(--cor-principal);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.08); /* Sombra mais clara */
+}
+
+body.dark-mode .projeto-texto {
+    color: var(--cor-fundo);
+}
+
+body.dark-mode .minhas-habilidades-titulo {
+    border-bottom: solid 3px var(--cor-fundo); /* Linha de destaque */
+    color: var(--cor-fundo);
+}
+
+.habilidade-item {
+    background: var(--cor-fundo-darkmode);
+    color: var(--cor-fundo);
+    padding: 10px 20px; /* Adiciona padding para espaçamento interno */
+    border-radius: 10px; /* Borda arredondada para os itens da lista */
+    box-shadow: 0 6px 18px rgba(255,255,255,0.12); /* Sombra para cada item */
+}
+
+body.dark-mode .sobre-mim {
+    background: var(--cor-principal);
+    box-shadow: 0 6px 18px rgba(255,255,255,0.12); /* Sombra mais clara */
+}
+
+body.dark-mode .sobre-mim-titulo {
+    color: var(--cor-fundo);
+    border-bottom-color: var(--cor-fundo);
+}
+
+body.dark-mode .sobre-mim-texto {
+    color: var(--cor-fundo);
+}
+
+body.dark-mode .contato-titulo {
+    color: var(--cor-fundo);
+    border-bottom: solid 3px var(--cor-fundo);
+}
+
+body.dark-mode .contato-texto {
+    color: var(--cor-fundo);
+}
+
+body.dark-mode .contato-item {
+    background: var(--cor-fundo-darkmode);
+    color: var(--cor-fundo);
+    padding: 10px 20px; /* Adiciona padding para espaçamento interno */
+    border-radius: 10px; /* Borda arredondada para os itens da lista */
+    box-shadow: 0 4px 12px rgba(255,255,255,0.15); /* Sombra para cada item */
+}
+
+/* Apresentação: título e texto em coluna, imagem ao lado */
+.apresentacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 50px 40px;
+    margin: 70px auto;
+    text-align: left;
+    max-width: 1100px;
+}
+
+.apresentacao-descricao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 220px;
+    gap: 16px;
+}
+.apresentacao-titulo {
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+    color: var(--cor-fundo-darkmode);
+    font-size: 40px;
+    font-weight: 800;
+    border-bottom: 3px solid var(--cor-fundo-darkmode);
+    padding-bottom: 10px;
+}
+.apresentacao-texto {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 12px;
+    color: var(--cor-fundo-darkmode);
+    font-size: 25px;
+    font-weight: 700;
+}
+.apresentacao-foto {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .apresentacao {
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px 10px;
+    text-align: center;
+  }
+  .apresentacao-conteudo {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .apresentacao-foto {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .apresentacao-titulo, .apresentacao-texto {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  
+}

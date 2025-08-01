@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu portifólio</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Overlay para escurecer o fundo do menu lateral -->
+    <div id="overlay-menu"></div>
+    <button id="menu-hamburguer" class="menu-hamburguer" aria-label="Abrir menu">
+        <img src="fotos/menu hamburguer 1.svg" alt="Menu" class="menu-hamburguer-imagem">
+    </button>
+    <nav class="barra-nav" id="barra-nav">
+        <button class="menu" id="btn-projetos">Projetos</button>
+        <button class="menu" id="btn-sobre">Sobre mim</button>
+        <button class="menu" id="btn-experiencia">Minhas habilidades</button>
+        <button class="menu-contato" id="btn-contato">Contato</button>
+        <button class="menu" id="btn-landing-page">
+            <a href="landing.html" class="menu-link">Landing Page</a>
+        </button>
+        <button class="modo-escuro" id="modo">
+            <span class="modo-claro">
+                <img src="fotos/dark mode.svg" alt="Modo claro" class="modo-claro-imagem">
+            </span>
+        </button>
+    </nav>
+    <header class="apresentacao">
+        <div class="apresentacao-descricao">
+            <h2 class="apresentacao-titulo">Oie!</h2>
+            <p class="apresentacao-texto">Seja muito bem vindo (a) ao meu portifólio, me chamo Pedro Sampaio, e <strong>não!</strong>, não tenho nenhuma relação de parentesco com o cantor, sou um Web designer Júnior e desenvolvedor front-end em descobrimento, espero que você goste dele, fiz com muita dedicação e carinho.
+            </p>
+        </div>
+        <img src="fotos/euu.jpg" alt="minha foto" class="apresentacao-foto">
+    </header>
+    <section class="Projetos" id="projetos">
+        <h2 class="Projetos-titulo">Projetos</h2>
+        <p class="Projetos-texto">Esses são alguns dos projetos que desenvolvi tanto nos cursos, quanto sozinho.</p>
+        <ul class="projetos-apresentacao">
+            <li class="projeto"><strong class="projeto-nome">Jacbus</strong>
+                <p class="projeto-texto">O projeto Jacbus, é o desenvolvimento no desenvolvimento de um aplicativo focado no serviço de transporte público, atuei como UX researcher e UI designer na prototipação de wireframes e fluxos de usuário.</p>
+                <div class="projeto-imagens">
+                    <img src="fotos/login.svg" alt="login ilustração" class="projeto-imagem">
+                    <img src="fotos/pagina principal.svg" alt="imagem da página principal" class="projeto-imagem">
+                    <img src="fotos/transporte.svg" alt="imagem da escolha do transporte" class="projeto-imagem">
+                </div>
+                <p class="link-projeto">Se quiser análisar com mais detalhe aqui está o link do projeto <a href="https://www.figma.com/design/k9tmVXEjDTrQdxbni5tqzr/Untitled?node-id=0-1&t=JDsotnSypd6dOSpo-1">Jacbus</a>
+            </li>
+            <li class="projeto"><strong class="projeto-nome">Aluramed</strong>
+                <p class="projeto-texto">A aluramed, é um produto focado na telemedicina e na saúde digital, oferecendo soluções para consultas online e acompanhamento de pacientes, no entanto a principal queixa dos usuários era a façta de algumas funcionalidades essenciais. Neste projeto atuei como UX researcher, com o objetivo de adicionar um novo campo para o aplicativo, onde o médico poderá fazer os registros de atendimentos dos pacientes.</p>
+                 <div class="projeto-imagens-aluramed">
+                    <img src="fotos/persona.png" alt="imagem da persona" class="projeto-imagem-persona">
+                    <img src="fotos/double diamond.png" alt="imagem do doble diamond" class="projeto-imagem-double-diamond">
+                </div>
+                <p class="link-projeto">Se quiser análisar com mais detalhe aqui está o link do projeto <a href="https://www.figma.com/board/BL9qfcUznNXiTXNXN1VrHd/Untitled?node-id=0-1&t=VkbiPLrNo6PA6nP2-1">Aluramed</a>
+            </li>
+            <li class="projeto"><strong class="projeto-nome">E-TICKET</strong>
+                <p class="projeto-texto">A E-TICKET, é um serviço digital focado na venda de ingressos para shows e eventos, onde a principal dor dos usuários era a dificuldade de encontrar ingressos disponíveis e a falta de informações claras sobre os eventos no web site e na falta de um aplicativo. Neste projeto, atuei e UI designer, criando protótipos de alta fidelidade para melhorar a experiência do usuário.</p>
+                 <div class="projeto-imagens">
+                    <img src="fotos/Home 1.svg" alt="imagem da página inicial" class="projeto-imagem">
+                    <img src="fotos/REI LEAO 1.svg" alt="imagem do detalhe do filme" class="projeto-imagem">
+                </div>
+                <p class="link-projeto">Se quiser análisar com mais detalhe aqui está o link do projeto <a href="https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1&t=aytK4A2AjPEI0FVa-1">E-TICKET</a>
+            </li>
+        </ul>
+    </section>
+    <section class="minhas-habilidades" id="minhas-habilidades">
+        <h2 class="minhas-habilidades-titulo">Minhas Habilidades</h2>
+        <ul class="habilidades-lista">
+            <li class="habilidade-item">HTML</li>
+            <li class="habilidade-item">CSS</li>
+            <li class="habilidade-item">JavaScript</li>
+            <li class="habilidade-item">Figma</li>
+            <li class="habilidade-item">UI/UX Design</li>
+            <li class="habilidade-item">UX Research</li>
+            <li class="habilidade-item">Entrevista com Usuário</li>
+            <li class="habilidade-item">Pesquisa de Usuário</li>
+            <li class="habilidade-item">Prototipação</li>
+        </ul>
+    </section>
+    <section class="sobre-mim" id="sobre-mim">
+        <h2 class="sobre-mim-titulo">Sobre mim</h2>
+        <p class="sobre-mim-texto">Comecei a minha imersão na área de T.I há menos de um ano, e realmente é aquilo que todos falam: "a área de T.I é para todos, basta você se identificar".
+        E logo de cara me encantei com o universo do Web Design, de como funciona a construção de um site ou de um aplicativo e de como um Web Designer é extremamamente importante para o desenvolvimanto, porque são eles que vão fazer com que o produto seja o mais usável o possível com bases em entrevistas e muita pesquisa para entender o usuário e suas necessidades.
+        </p>
+        <p class="sobre-mim-texto">Logo depois entendi que se eu queria ser um profissional mais completo, eu deveria entender e aprender um pouco sobre o desenvolvimento front-end, e foi aí que eu comecei a estudar HTML, CSS e JavaScript, e me encantei com o poder que essas linguagens tem de transformar um site estático em algo dinâmico e interativo.
+        Hoje, estou em busca de uma oportunidade de estágio ou trainee, para que eu possa colocar em prática todo esse conhecimento adquirido.</p>
+    </section>
+    <section class="contato" id="contato">
+        <h2 class="contato-titulo">Contato</h2>
+        <p class="contato-texto">Se meu trabalho e minhas habilidades te chamaram atenção, aqui estão algumas formas de entrar em contato comigo, e espero que possamos trabalhar junto :)</p>
+        <ul class="contato-lista">
+            <li class="contato-item"><a href="https://www.linkedin.com/in/pedro-sampaio-463a77375/" target="_blank">LinkedIn</a></li>
+            <li class="contato-item"><a href="https://github.com/Pedpo58" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
+    <button id="btn-topo" title="Voltar ao topo" class="btn-topo">
+        <img src="fotos/up.svg" alt="Voltar ao topo" class="btn-topo-imagem">
+    </button>
+    <footer class="footer-vericidade">
+        <div class="celo-vericidade">
+            <span class="celo-texto">Portfólio criado e autenticado por Pedro Sampaio &copy; 2025</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="script-menu.js"></script>
+</body>
+</html>
