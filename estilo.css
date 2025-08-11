@@ -553,7 +553,7 @@ a:hover {
         gap: 20px; /* Aumenta o espaçamento entre os projetos */
     }
     .projeto {
-        background-color: red;
+        background-color: var(--cor-fundo-darkmode);
         width: 350px; /* Largura responsiva para os projetos */
         padding: 20px; /* Ajusta o padding */
         margin: 5%; /* Espaço entre os projetos */
