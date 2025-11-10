@@ -643,11 +643,6 @@ a:hover {
 /*-----------------------------------*/
 /*----------TABLETS------------------*/
 @media screen and (min-width: 577px) and (max-width: 768px) {
-    /* Regras específicas para tablets pequenos */
-    .barra-nav {
-        /* Por exemplo, um menu que fica no topo, se for o caso de tablet */
-        /* ... ou manter as regras de coluna e reposicionar itens, etc. */
-    }
     
     .projeto {
         width: 45%; /* Permite 2 projetos por linha em tablets */

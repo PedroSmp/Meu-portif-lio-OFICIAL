@@ -24,7 +24,7 @@
     margin-top: 5px;
 }
 .apresentacao-texto-landing {
-    font-family: var(--fonte-principal);
+    font-family: var(--fonte-secundaria);;
     font-weight: 600;
     font-size: 20px;
     color: var(--cor-fundo-darkmode);
