@@ -1,0 +1,174 @@
+.Projetos {
+    font-size: 20px;
+    padding: 50px 40px; /* Aumenta o padding */
+    max-width: 900px; /* Aumenta a largura máxima para os projetos */
+    margin: 150px auto; /* Ajusta a margem */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Projetos-titulo {
+    font-size: 40px; 
+    font-weight: 800;
+    color: var(--cor-fundo-darkmode);
+    text-align: left; /* Centraliza o título */
+    border-bottom: solid 3px var(--cor-fundo-darkmode); /* Linha de destaque */
+    margin-bottom: 15px; /* Mais espaço abaixo do título */
+    color: var(--cor-fonte-principal);
+    width: 50%; /* Garante que o título ocupe a largura total */
+}
+
+.Projetos-texto {
+    font-family: var(--fonte-secundaria);
+    font-size: 25px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--cor-fundo-darkmode);
+}
+
+.projetos-apresentacao {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os projetos quebrem a linha */
+    justify-content: space-around; /* Centraliza os projetos */
+    gap: 80px; /* Aumenta o espaçamento entre os projetos */
+    margin-top: 30px;
+}
+
+.projeto {
+    margin-top: 20px;
+    background: var(--cor-fundo-darkmode);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para cada projeto */
+    padding: 25px;
+    width: 1000px; /* Largura fixa para cada projeto */
+    text-align: left;
+    transition: transform 0.3s ease-in-out; /* Efeito de hover */
+}
+
+.projeto:hover {
+    transform: translateY(-10px); /* Levanta o projeto ao passar o mouse */
+}
+
+.projeto-nome {
+    font-size: 35px; /* Aumenta o tamanho do nome do projeto */
+    font-weight: 700; /* Deixa o nome mais destacado */
+    color: var(--cor-fundo);
+    margin-bottom: 10px; /* Espaço abaixo do nome do projeto */
+}
+
+.projeto-texto{
+    font-family: var(--fonte-secundaria);
+    line-height: 1.5;
+    color: var(--cor-fundo);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.link-projeto{
+    font-family: var(--fonte-secundaria);
+    margin-top: 15px;
+    color: var(--cor-fundo);
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+a{
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--cor-fundo);
+    text-decoration: line;
+}
+a:hover {
+    font-size: 30px;
+    color: white;
+}
+
+.projeto-imagens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.projeto-imagem {
+    width: 200px; /* Largura fixa para as imagens */
+    height: 400px; /* Altura fixa para as imagens */
+    border-radius: 10px; /* Borda arredondada para as imagens */
+    margin-top: 15px; /* Espaço entre o texto e a imagem */
+}
+
+.projeto-imagens-aluramed {
+    display: flex;
+    flex-direction: column; /* Coloca as imagens em coluna */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.projeto-imagem-persona {
+    width: 680px; /* Largura fixa para as imagens */
+    height: 430px; /* Altura fixa para as imagens */
+    border-radius: 10px; /* Borda arredondada para as imagens */
+    margin-top: 15px; /* Espaço entre o texto e a imagem */
+}
+
+.projeto-imagem-double-diamond {
+    width: 800px; /* Largura fixa para as imagens */
+    height: 400px; /* Altura fixa para as imagens */
+    border-radius: 10px; /* Borda arredondada para as imagens */
+    margin-top: 15px; /* Espaço entre o texto e a imagem */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="Projetos" id="projetos">
+        <h2 class="Projetos-titulo">Projetos</h2>
+        <p class="Projetos-texto">Esses são alguns dos projetos que desenvolvi tanto nos cursos, quanto sozinho.</p>
+        <ul class="projetos-apresentacao">
+            <div class="card text-bg-dark">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">O projeto Jacbus, é o desenvolvimento no desenvolvimento de um aplicativo focado no serviço de transporte público, atuei como UX researcher e UI designer na prototipação de wireframes e fluxos de usuário.</p>
+                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <li class="projeto"><strong class="projeto-nome">Aluramed</strong>
+                <p class="projeto-texto">A aluramed, é um produto focado na telemedicina e na saúde digital, oferecendo soluções para consultas online e acompanhamento de pacientes, no entanto a principal queixa dos usuários era a façta de algumas funcionalidades essenciais. Neste projeto atuei como UX researcher, com o objetivo de adicionar um novo campo para o aplicativo, onde o médico poderá fazer os registros de atendimentos dos pacientes.</p>
+                 <div class="projeto-imagens-aluramed">
+                    <img src="fotos/persona.png" alt="imagem da persona" class="projeto-imagem-persona">
+                    <img src="fotos/double diamond.png" alt="imagem do doble diamond" class="projeto-imagem-double-diamond">
+                </div>
+                <p class="link-projeto">Se quiser análisar com mais detalhe aqui está o link do projeto <a href="https://www.figma.com/board/BL9qfcUznNXiTXNXN1VrHd/Untitled?node-id=0-1&t=VkbiPLrNo6PA6nP2-1">Aluramed</a>
+            </li>
+            <li class="projeto"><strong class="projeto-nome">E-TICKET</strong>
+                <p class="projeto-texto">A E-TICKET, é um serviço digital focado na venda de ingressos para shows e eventos, onde a principal dor dos usuários era a dificuldade de encontrar ingressos disponíveis e a falta de informações claras sobre os eventos no web site e na falta de um aplicativo. Neste projeto, atuei e UI designer, criando protótipos de alta fidelidade para melhorar a experiência do usuário.</p>
+                 <div class="projeto-imagens">
+                    <img src="fotos/Home 1.svg" alt="imagem da página inicial" class="projeto-imagem">
+                    <img src="fotos/REI LEAO 1.svg" alt="imagem do detalhe do filme" class="projeto-imagem">
+                </div>
+                <p class="link-projeto">Se quiser análisar com mais detalhe aqui está o link do projeto <a href="https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1&t=aytK4A2AjPEI0FVa-1">E-TICKET</a>
+            </li>
+              <li class="projeto"><strong class="projeto-nome">BemLar</strong>
+                <p class="projeto-texto">Com a intenção de ajudar diaristas a encontrarem trabalhos a BEMLAR  chega para ajudar essas mulheres facilitando o cotidiano delas. Um Site e um APP focado para o público feminino possuí as cores rosa com algumas variações para arremeter a delicadeza de um cuidado de casa.</p>
+                 <div class="projeto-imagens">
+                    <img src="fotos/BemLar.svg" alt="imagem da página inicial" class="projeto-imagem">
+                </div>
+                <p class="link-projeto">Se quiser análisar com mais detalhe aqui estão os links do projeto<a href="https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1&t=aytK4A2AjPEI0FVa-1">BEMLAR /</a> 
+                <a href="https://github.com/PedroSmp/BemLar.git">Github</a>
+            </li>
+        </ul>
+    </section>

@@ -5,11 +5,6 @@
     padding: 0;
 }
 
-a[href*="Jacbus"] {
-    color: var(--cor-fonte-principal) !important;
-    text-decoration: underline;
-    font-weight: bold;
-}
 :root {
     --cor-fundo-darkmode: #212842; /* Fundo escuro para o modo dark */
     --cor-fundo: #F0E7D5; /* Bege claro */
@@ -17,7 +12,7 @@ a[href*="Jacbus"] {
 
 body {
     background-color: var(--cor-fundo);
-    color: var(--cor-fonte-principal);
+    color: var(--cor-fundo-darkmode);
     position: relative;
     min-height: 100vh;
     overflow-x: hidden; /* Evita scroll horizontal indesejado */
@@ -29,94 +24,45 @@ body {
 /*-------------------------*/
 /*------NAV------------*/
 
+
 .container-fluid{
-    background-color: var(--cor-fundo-darkmode);
-}
-
-.modo-escuro{
-    width: 64px;
-    height: 94px;
-    border-color: none;
-    border-radius: 10%;
-    box-shadow: 2px 2px 4px var(--cor-fundo-darkmode);
-    background-color: var(--cor-fundo);
-    position: absolute;
-    top: 1px; 
-    right:10px; 
-}
-.modo-escuro:hover {
-    cursor: pointer;
-    background-color: #8A9AC6;
-    border: #8A9AC6 1px solid;
-}
-
-.modo-escuro-imagem {
-    object-fit: cover;
-    width: 60px;
     height: 60px;
+    background-color: var(--cor-fundo);
 }
 
+.navbar-brand{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--cor-fundo-darkmode);
+}
+
+.nav-link{
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--cor-fundo-darkmode);
+}
 
 
 /*-------------------------*/
 /*--------HEADER----------*/
+
 .apresentacao{
-    display: flex;
-    padding: 50px 40px; /* Aumenta o padding */
-    margin: 70px auto; /* Ajusta a margem */
-    text-align: center;
-   flex-direction: column;
+    max-width: 1000px;
 }
 
-.apresentacao-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex: 1 1 0;
-    min-width: 220px;
-    gap: 16px;
-}
-
-.apresentacao-titulo {
-    color: var(--cor-fundo-darkmode);
-    font-size: 40px; /* Aumenta o tamanho da fonte */
-    font-weight: 800;
-    margin-top: 100px;
-    width: 60%;
-    margin-bottom: 0;
-    border-bottom: 3px solid var(--cor-fundo-darkmode); /* Linha de destaque */
-    padding-bottom: 10px; /* Espaçamento da linha */
-}
-
-.apresentacao-texto {
-    font-family: var(--fonte-secundaria);
-    color: var(--cor-fundo-darkmode);
-    font-size: 25px; /* Aumenta o tamanho da fonte */
-    text-align: left;
-    font-weight: 400;
+.card{
     width: 100%;
-    margin-top: 12px;
 }
-
-.apresentacao-foto {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-    flex-shrink: 0;
-}
-
 
 
 
 /*-------------------------*/
 /*--------PROJETOS---------*/
+
 .Projetos {
     font-size: 20px;
     padding: 50px 40px; /* Aumenta o padding */
-    max-width: 900px; /* Aumenta a largura máxima para os projetos */
+    max-width: 1300px; /* Aumenta a largura máxima para os projetos */
     margin: 150px auto; /* Ajusta a margem */
     text-align: center;
     display: flex;
@@ -124,117 +70,15 @@ body {
     align-items: center;
 }
 
-.Projetos-titulo {
-    font-size: 40px; 
-    font-weight: 800;
-    color: var(--cor-fundo-darkmode);
-    text-align: left; /* Centraliza o título */
-    border-bottom: solid 3px var(--cor-fundo-darkmode); /* Linha de destaque */
-    margin-bottom: 15px; /* Mais espaço abaixo do título */
-    color: var(--cor-fonte-principal);
-    width: 50%; /* Garante que o título ocupe a largura total */
-}
-
-.Projetos-texto {
-    font-family: var(--fonte-secundaria);
-    font-size: 25px;
-    text-align: left;
+.btn {
+    background-color: var(--cor-fundo-darkmode);
+    border: none;
     font-weight: 600;
-    color: var(--cor-fundo-darkmode);
 }
 
-.projetos-apresentacao {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap; /* Permite que os projetos quebrem a linha */
-    justify-content: space-around; /* Centraliza os projetos */
-    gap: 80px; /* Aumenta o espaçamento entre os projetos */
-    margin-top: 30px;
-}
-
-.projeto {
-    margin-top: 20px;
-    background: var(--cor-fundo-darkmode);
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para cada projeto */
-    padding: 25px;
-    width: 1000px; /* Largura fixa para cada projeto */
-    text-align: left;
-    transition: transform 0.3s ease-in-out; /* Efeito de hover */
-}
-
-.projeto:hover {
-    transform: translateY(-10px); /* Levanta o projeto ao passar o mouse */
-}
-
-.projeto-nome {
-    font-size: 35px; /* Aumenta o tamanho do nome do projeto */
-    font-weight: 700; /* Deixa o nome mais destacado */
-    color: var(--cor-fundo);
-    margin-bottom: 10px; /* Espaço abaixo do nome do projeto */
-}
-
-.projeto-texto{
-    font-family: var(--fonte-secundaria);
-    line-height: 1.5;
-    color: var(--cor-fundo);
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.link-projeto{
-    font-family: var(--fonte-secundaria);
-    margin-top: 15px;
-    color: var(--cor-fundo);
-    font-size: 20px;
-    font-weight: 400;
-    text-decoration: none;
-}
-a{
-    font-weight: 500;
-    font-size: 25px;
-    color: var(--cor-fundo);
-    text-decoration: line;
-}
-a:hover {
-    font-size: 30px;
-    color: white;
-}
-
-.projeto-imagens{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.projeto-imagem {
-    width: 200px; /* Largura fixa para as imagens */
-    height: 400px; /* Altura fixa para as imagens */
-    border-radius: 10px; /* Borda arredondada para as imagens */
-    margin-top: 15px; /* Espaço entre o texto e a imagem */
-}
-
-.projeto-imagens-aluramed {
-    display: flex;
-    flex-direction: column; /* Coloca as imagens em coluna */
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Espaçamento entre as imagens */
-}
-
-.projeto-imagem-persona {
-    width: 680px; /* Largura fixa para as imagens */
-    height: 430px; /* Altura fixa para as imagens */
-    border-radius: 10px; /* Borda arredondada para as imagens */
-    margin-top: 15px; /* Espaço entre o texto e a imagem */
-}
-
-.projeto-imagem-double-diamond {
-    width: 800px; /* Largura fixa para as imagens */
-    height: 400px; /* Altura fixa para as imagens */
-    border-radius: 10px; /* Borda arredondada para as imagens */
-    margin-top: 15px; /* Espaço entre o texto e a imagem */
+.card-img-top {
+    height: 400px; /* Define uma altura fixa para a imagem */
+    object-fit: cover; 
 }
 
 
