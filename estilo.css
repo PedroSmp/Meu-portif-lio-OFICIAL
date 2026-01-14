@@ -6,17 +6,15 @@
 }
 
 :root {
-    --cor-fundo-darkmode: #212842; /* Fundo escuro para o modo dark */
-    --cor-fundo: #F0E7D5; /* Bege claro */
+    --cor-fundo-darkmode: #212842; 
+    --cor-fundo: #F0E7D5;
 }
 
 body {
-    background-color: var(--cor-fundo);
     color: var(--cor-fundo-darkmode);
     position: relative;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita scroll horizontal indesejado */
-    font-family: var(--fonte-principal);
+    overflow-x: hidden;
     line-height: 1.6; /* Melhora a legibilidade */
     letter-spacing: 0.5px; /* Sutil espaçamento entre letras */
 }
@@ -27,7 +25,6 @@ body {
 
 .container-fluid{
     height: 60px;
-    background-color: var(--cor-fundo);
 }
 
 .navbar-brand{
@@ -45,13 +42,18 @@ body {
 
 /*-------------------------*/
 /*--------HEADER----------*/
-
 .apresentacao{
-    max-width: 1000px;
+ 
+    justify-items: center;
+    margin-top: 50px;
 }
-
 .card{
     width: 100%;
+}
+
+.card-text{
+    margin-top: 40px;
+    font-size: 20px;
 }
 
 
@@ -63,7 +65,7 @@ body {
     font-size: 20px;
     padding: 50px 40px; /* Aumenta o padding */
     max-width: 1300px; /* Aumenta a largura máxima para os projetos */
-    margin: 150px auto; /* Ajusta a margem */
+    margin: 50px auto; /* Ajusta a margem */
     text-align: center;
     display: flex;
     flex-direction: column;
