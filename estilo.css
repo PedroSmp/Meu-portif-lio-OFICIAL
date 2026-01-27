@@ -11,21 +11,17 @@
 }
 
 body {
+    background-color: var(--cor-fundo);
     color: var(--cor-fundo-darkmode);
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
-    line-height: 1.6; /* Melhora a legibilidade */
-    letter-spacing: 0.5px; /* Sutil espaçamento entre letras */
+    line-height: 1.6; 
+    letter-spacing: 0.5px; 
 }
 
 /*-------------------------*/
 /*------NAV------------*/
-
-
-.container-fluid{
-    height: 60px;
-}
 
 .navbar-brand{
     font-size: 25px;
@@ -43,7 +39,6 @@ body {
 /*-------------------------*/
 /*--------HEADER----------*/
 .apresentacao{
- 
     justify-items: center;
     margin-top: 50px;
 }
@@ -51,8 +46,16 @@ body {
     width: 100%;
 }
 
+.card-body{
+    padding: 20px;
+}
+
+.card-title{
+    margin-top: 30px;
+}
+
 .card-text{
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 20px;
 }
 
