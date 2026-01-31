@@ -1,13 +1,15 @@
-/* Esconde o menu hamburguer fora do mobile */
+
 
 *{
     margin: 0;
     padding: 0;
+    font-family: var(--fonte-principal) !important
 }
 
 :root {
     --cor-fundo-darkmode: #212842; 
     --cor-fundo: #F0E7D5;
+    --fonte-principal: 'Google Sans', sans-serif;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
 /*------NAV------------*/
 
 .navbar-brand{
+    font-family: var(--fonte-principal);
     font-size: 25px;
     font-weight: 700;
     color: var(--cor-fundo-darkmode);
@@ -46,17 +49,25 @@ body {
     width: 100%;
 }
 
+.img-fluid{
+    border: 2px solid var(--cor-fundo-darkmode);
+    border-right: 0px;
+}
+
 .card-body{
     padding: 20px;
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--cor-fundo-darkmode);
 }
 
 .card-title{
     margin-top: 30px;
+    font-size: 30px;
 }
 
 .card-text{
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 
@@ -66,13 +77,16 @@ body {
 
 .Projetos {
     font-size: 20px;
-    padding: 50px 40px; /* Aumenta o padding */
-    max-width: 1300px; /* Aumenta a largura máxima para os projetos */
-    margin: 50px auto; /* Ajusta a margem */
+    max-width: 90%; 
+    margin: 50px auto; 
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.projetos-apresentacao{
+    padding-left: 0px;
 }
 
 .btn {
@@ -82,8 +96,10 @@ body {
 }
 
 .card-img-top {
-    height: 400px; /* Define uma altura fixa para a imagem */
-    object-fit: cover; 
+    border: 2px solid var(--cor-fundo-darkmode); 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 0px;
 }
 
 
@@ -93,7 +109,7 @@ body {
 /*--------HABILIDADES------*/
 .minhas-habilidades {
     font-size: 20px;
-    padding: 50px 40px; /* Aumenta o padding */
+    padding: 50px 40px; 
     max-width: 900px; /* Aumenta a largura máxima */
     margin: 150px auto; /* Ajusta a margem */
 }
@@ -136,12 +152,12 @@ body {
 /*----SOBRE MIM-----------*/
 .sobre-mim {
     font-size: 18px;
-    padding: 40px 50px; /* Aumenta o padding */
+    padding: 50px 40px; /* Aumenta o padding */
     margin: 80px auto; /* Centraliza e adiciona margem superior/inferior */
     text-align: left;
     background: var(--cor-fundo-darkmode);
     border-radius: 20px; /* Borda mais arredondada */
-    max-width: 900px; /* Aumenta a largura máxima */
+    max-width: 90%; /* Aumenta a largura máxima */
     box-shadow: 0 6px 18px rgba(0,0,0,0.2); /* Sombra mais proeminente */
     z-index: 1;
     position: relative;
@@ -172,49 +188,18 @@ body {
     max-width: 900px; /* Aumenta a largura máxima */
     margin: 150px auto; /* Ajusta a margem */
     text-align: center;
+    font-family: var(--fonte-principal);
+    color: var(--cor-fundo-darkmode);
 }
 
-.contato-titulo {
-    font-size: 40px; 
+.contato-titulo{
+    font-size: 40px;
     font-weight: 800;
-    color: var(--cor-fundo-darkmode);
-    text-align: left; /* Centraliza o título */
-    border-bottom: solid 3px var(--cor-fundo-darkmode); /* Linha de destaque */
-    margin-bottom: 15px; /* Mais espaço abaixo do título */
-    color: var(--cor-fonte-principal);
-    width: 50%; /* Garante que o título ocupe a largura total */
 }
 
-.contato-texto {
-    font-family: var(--fonte-secundaria);
-    font-size: 25px;
-    text-align: left;
-    font-weight: 500;
-    color: var(--cor-fundo-darkmode);
+.contato-texto{
+    font-size: 24px;
 }
-
-.contato-lista {
-    list-style-type: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o padding padrão */
-    margin: 0; /* Remove a margem padrão */
-    display: flex;
-    flex-direction: column; /* Permite que os itens quebrem a linha */
-    justify-content: center; /* Centraliza os itens */
-    gap: 10px; /* Espaçamento entre os itens da lista */
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.contato-item {
-    text-align: left;
-    width: 30%; /* Garante que a lista ocupe a largura total */
-    background: var(--cor-fundo-darkmode);
-    color: var(--cor-fundo);
-    padding: 10px 20px; /* Adiciona padding para espaçamento interno */
-    border-radius: 10px; /* Borda arredondada para os itens da lista */
-    box-shadow: 0 4px 12px rgba(255,255,255,0.15); /* Sombra para cada item */
-}
-
 
 /*-------------------------*/
 /*--------FOOTER---------*/
