@@ -50,14 +50,17 @@ body {
 }
 
 .img-fluid{
-    border: 2px solid var(--cor-fundo-darkmode);
-    border-right: 0px;
+    border: 1px solid gray;
+}
+.rounded-start{
+    border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px !important;
 }
 
 .card-body{
     padding: 20px;
     background-color: var(--cor-fundo);
-    border: 2px solid var(--cor-fundo-darkmode);
+    border: 1px solid gray;
 }
 
 .card-title{
