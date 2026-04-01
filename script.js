@@ -24,7 +24,8 @@ const projects = {
         images: [
         'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/BemLAR.png',
         'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/DASHBOARD.png',
-        'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/FINANÇAS.png'
+        'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/FINANÇAS.png',
+        'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona_bemlar.png'
     ],
         tags: [{ label: 'UI/UX', cls: '' }, { label: 'Figma', cls: 'green' }],
         desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico. Decidi unir minha vivência pessoal às minhas habilidades de UI/UX para criar mais que um app: uma plataforma que valoriza essas profissionais. Com um design acolhedor e um fluxo de contratação simplificado, o foco é oferecer uma experiência eficiente, segura e, acima de tudo, humana para quem contrata e para quem presta o serviço.',
@@ -36,7 +37,7 @@ const projects = {
     agrirs: {
         title: 'AgriRs',
         images: [
-        'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/BemLAR.png',
+        'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png',
         'link-da-foto-2.png',
         'link-da-foto-3.png'
     ],
@@ -50,7 +51,7 @@ const projects = {
     aluramed: {
     title: 'AluraMed',
     images: [
-        'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/BemLAR.png',
+        'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AluraMED.png',
         'link-da-foto-2.png',
         'link-da-foto-3.png'
     ],
