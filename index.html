@@ -1,273 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pedro Sampaio — UI/UX & Dev</title>
-<link rel="stylesheet" href="estilo.css">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Sampaio — UI/UX Designer</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">Pedro<span>.</span></div>
+    <div class="nav-logo">Pedro<span>.</span></div>
 
-  <ul class="nav-links">
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#minhas-habilidades">Habilidades</a></li>
-    <li><a href="#sobre-mim">Sobre mim</a></li>
-  </ul>
+    <ul class="nav-links">
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#minhas-habilidades">Habilidades</a></li>
+        <li><a href="#sobre-mim">Sobre mim</a></li>
+    </ul>
 
-  <div class="nav-actions">
-    <a href="#contato" class="nav-cta" data-pt="Contato" data-en="Contact">Contato</a>
-    <a href="curriculo-pedro-sampaio.pdf" download class="nav-cv" data-pt="Currículo" data-en="Resume">Currículo</a>
-    <button class="lang-btn" onclick="toggleLang()" id="lang-btn">
-      <span class="lang-flag">🇺🇸</span>
-      <span id="lang-label">EN</span>
+    <div class="nav-actions">
+        <a href="#contato" class="nav-cta" data-pt="Contato" data-en="Contact">Contato</a>
+        <a href="curriculo-pedro-sampaio.pdf" download class="nav-cv" data-pt="Currículo" data-en="Resume">Currículo</a>
+        <button class="lang-btn" onclick="toggleLang()" id="lang-btn">
+            <span class="lang-flag">🇺🇸</span>
+            <span id="lang-label">EN</span>
+        </button>
+    </div>
+
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
     </button>
-  </div>
-
-  <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
-<!-- MENU MOBILE -->
 <div class="nav-mobile-menu" id="mobile-menu">
-  <a href="#projetos" onclick="closeMenu()">Projetos</a>
-  <a href="#minhas-habilidades" onclick="closeMenu()">Habilidades</a>
-  <a href="#sobre-mim" onclick="closeMenu()">Sobre mim</a>
-  <a href="curriculo-pedro-sampaio.pdf" download class="mob-cv">Currículo</a>
-  <button onclick="toggleLang(); closeMenu()">EN / PT</button>
-  <a href="#contato" class="mob-contact" onclick="closeMenu()">Contato</a>
+    <a href="#projetos" onclick="closeMenu()">Projetos</a>
+    <a href="#minhas-habilidades" onclick="closeMenu()">Habilidades</a>
+    <a href="#sobre-mim" onclick="closeMenu()">Sobre mim</a>
+    <a href="curriculo-pedro-sampaio.pdf" download class="mob-cv">Currículo</a>
+    <button onclick="toggleLang(); closeMenu()">EN / PT</button>
+    <a href="#contato" class="mob-contact" onclick="closeMenu()">Contato</a>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-  <div class="hero-text">
-    <div class="hero-tag"><div class="hero-tag-dot"></div> <span data-pt="Disponível para estágio" data-en="Available for internship">Disponível para estágio</span></div>
-    <h1 data-pt="Olá, sou<br><em>Pedro Sampaio</em>" data-en="Hi, I'm<br><em>Pedro Sampaio</em>">Olá, sou<br><em>Pedro Sampaio</em></h1>
-    <p data-pt="Estudante de Desenvolvimento de Software Multiplataforma na FATEC, apaixonado por UI/UX Design e desenvolvimento front-end. Crio soluções práticas com foco na experiência do usuário." data-en="Software Development student at FATEC, passionate about UI/UX Design and front-end development. I build practical solutions focused on user experience.">Estudante de Desenvolvimento de Software Multiplataforma na FATEC, apaixonado por UI/UX Design e desenvolvimento front-end. Crio soluções práticas com foco na experiência do usuário.</p>
-    <div class="hero-btns">
-      <a href="#projetos" class="btn-primary" data-pt="Ver projetos " data-en="See my projects ">Ver projetos </a>
-      <a href="https://www.linkedin.com/in/pedro-sampaio-463a77375" target="_blank" class="btn-secondary">LinkedIn </a>
+    <div class="hero-text">
+        <div class="hero-tag">
+            <div class="hero-tag-dot"></div> 
+            <span data-pt="Disponível para estágio em UI/UX" data-en="Available for UI/UX internship">Disponível para estágio em UI/UX</span>
+        </div>
+        <h1 data-pt="Olá, sou<br><em>Pedro Sampaio</em>" data-en="Hi, I'm<br><em>Pedro Sampaio</em>">Olá, sou<br><em>Pedro Sampaio</em></h1>
+        <p data-pt="UI/UX Designer focado em criar interfaces funcionais, acessíveis e centradas na experiência do usuário. Transformo problemas complexos em soluções visuais intuitivas." data-en="UI/UX Designer focused on building functional, accessible, and user-centered interfaces. I turn complex problems into intuitive visual solutions.">UI/UX Designer focado em criar interfaces funcionais, acessíveis e centradas na experiência do usuário. Transformo problemas complexos em soluções visuais intuitivas.</p>
+        <div class="hero-btns">
+            <a href="#projetos" class="btn-primary" data-pt="Ver projetos" data-en="See my projects">Ver projetos</a>
+            <a href="https://www.linkedin.com/in/pedro-sampaio-463a77375" target="_blank" class="btn-secondary">LinkedIn</a>
+        </div>
+        <div class="hero-stats">
+            <div>
+                <div class="hero-stat-num">4</div>
+                <div class="hero-stat-lbl" data-pt="Projetos" data-en="Projects">Projetos</div>
+            </div>
+            <div>
+                <div class="hero-stat-num">Figma</div>
+                <div class="hero-stat-lbl" data-pt="Expertise" data-en="Expertise">Expertise</div>
+            </div>
+            <div>
+                <div class="hero-stat-num">FATEC</div>
+                <div class="hero-stat-lbl">DSM</div>
+            </div>
+        </div>
     </div>
-    <div class="hero-stats">
-      <div>
-        <div class="hero-stat-num">4</div>
-        <div class="hero-stat-lbl" data-pt="Projetos" data-en="Projects">Projetos</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">1+</div>
-        <div class="hero-stat-lbl" data-pt="Ano em T.I" data-en="Year in Tech">Ano em T.I</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">FATEC</div>
-        <div class="hero-stat-lbl">DSM</div>
-      </div>
-    </div>
-  </div>
 </div>
 
-<!-- PROJETOS -->
 <section id="projetos">
-  <div class="section-label" data-pt="Portfólio" data-en="Portfolio">Portfólio</div>
-  <div class="section-title" data-pt="Projetos" data-en="Projects">Projetos</div>
-  <div class="section-sub" data-pt="Projetos desenvolvidos na faculdade e por conta própria." data-en="Projects developed at college and on my own.">Projetos desenvolvidos na faculdade e por conta própria.</div>
+    <div class="section-label" data-pt="Portfólio" data-en="Portfolio">Portfólio</div>
+    <div class="section-title" data-pt="Projetos em Destaque" data-en="Featured Projects">Projetos em Destaque</div>
+    <div class="section-sub" data-pt="Estudos de caso focados em UX Research e UI Design." data-en="Case studies focused on UX Research and UI Design.">Estudos de caso focados em UX Research e UI Design.</div>
 
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <img class="project-img" src="https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/BemLAR.png" alt="Bem Lar">
-      <div class="project-body">
-        <div class="project-tags"><span class="project-tag">UI/UX</span><span class="project-tag green">Figma</span></div>
-        <div class="project-title">Bem Lar</div>
-        <div class="project-desc" data-pt="Plataforma para conectar diaristas a clientes. Projeto focado no público feminino, com design acolhedor e fluxo simples de contratação." data-en="Platform to connect housekeepers with clients. Focused on a female audience, with a welcoming design and simple hiring flow.">Plataforma para conectar diaristas a clientes. Projeto focado no público feminino, com design acolhedor e fluxo simples de contratação.</div>
-        <button class="project-link" onclick="openProject('bemlar')" data-pt="Ver detalhes →" data-en="See details ">Ver detalhes </button>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img class="project-img" src="https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png" alt="AgriRs">
-      <div class="project-body">
-        <div class="project-tags"><span class="project-tag">Front-end</span><span class="project-tag yellow">Scrum Master</span></div>
-        <div class="project-title">AgriRs</div>
-        <div class="project-desc" data-pt="Site completo para o laboratório AgriRs. Desenvolvido em equipe com metodologia Scrum. Atuei como Scrum Master organizando as sprints e dailies." data-en="Complete website for the AgriRs laboratory. Developed as a team using Scrum methodology. I served as Scrum Master, organizing sprints and dailies.">Site completo para o laboratório AgriRs. Desenvolvido em equipe com metodologia Scrum. Atuei como Scrum Master organizando as sprints e dailies.</div>
-        <button class="project-link" onclick="openProject('agrirs')" data-pt="Ver detalhes →" data-en="See details ">Ver detalhes </button>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img class="project-img" src="https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AluraMED.png" alt="AluraMed">
-      <div class="project-body">
-        <div class="project-tags"><span class="project-tag">UX Research</span><span class="project-tag green">Figma</span></div>
-        <div class="project-title">AluraMed</div>
-        <div class="project-desc" data-pt="Produto de telemedicina focado em consultas online. Atuei como UX Researcher identificando melhorias e adicionando funcionalidades essenciais para médicos e pacientes." data-en="Telemedicine product focused on online consultations. I worked as a UX Researcher identifying improvements and adding essential features for doctors and patients.">Produto de telemedicina focado em consultas online. Atuei como UX Researcher identificando melhorias e adicionando funcionalidades essenciais para médicos e pacientes.</div>
-        <button class="project-link" onclick="openProject('aluramed')" data-pt="Ver detalhes →" data-en="See details ">Ver detalhes </button>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img class="project-img" src="https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/E-TICKET.png" alt="E-Ticket">
-      <div class="project-body">
-        <div class="project-tags"><span class="project-tag">UI Design</span><span class="project-tag green">Figma</span></div>
-        <div class="project-title">E-Ticket</div>
-        <div class="project-desc" data-pt="App de venda de ingressos para shows e eventos. Atuei como UI Designer criando protótipos de alta fidelidade para melhorar a usabilidade e clareza das informações." data-en="Ticket sales app for shows and events. I worked as UI Designer creating high-fidelity prototypes to improve usability and information clarity.">App de venda de ingressos para shows e eventos. Atuei como UI Designer criando protótipos de alta fidelidade para melhorar a usabilidade e clareza das informações.</div>
-        <button class="project-link" onclick="openProject('eticket')" data-pt="Ver detalhes →" data-en="See details ">Ver detalhes </button>
-      </div>
-    </div>
-
-  </div>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img class="project-img" src="https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/BemLAR.png" alt="Bem Lar">
+            <div class="project-body">
+                <div class="project-tags"><span class="project-tag">UI/UX</span><span class="project-tag green">Figma</span></div>
+                <div class="project-title">Bem Lar</div>
+                <div class="project-desc" data-pt="Plataforma para conectar diaristas a clientes. Foco em impacto social e usabilidade." data-en="Platform to connect housekeepers with clients. Focus on social impact and usability.">Plataforma para conectar diaristas a clientes. Foco em impacto social e usabilidade.</div>
+                <button class="project-link" onclick="openProject('bemlar')" data-pt="Ver detalhes →" data-en="See details →">Ver detalhes →</button>
+            </div>
+        </div>
+        </div>
 </section>
 
-<!-- HABILIDADES -->
-<div id="minhas-habilidades">
-  <div style="max-width:1100px;margin:0 auto;">
+<section id="minhas-habilidades">
     <div class="section-label" data-pt="Skills" data-en="Skills">Skills</div>
-    <div class="section-title" data-pt="Minhas Habilidades" data-en="My Skills">Minhas Habilidades</div>
-    <div class="section-sub" data-pt="Ferramentas e tecnologias que uso no dia a dia." data-en="Tools and technologies I use every day.">Ferramentas e tecnologias que uso no dia a dia.</div>
+    <div class="section-title" data-pt="Expertise Técnica" data-en="Technical Expertise">Expertise Técnica</div>
     <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(39,174,96,0.1)">💻</div>
-        <div class="skill-title" data-pt="Front-end" data-en="Front-end">Front-end</div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">React</span>
+        <div class="skill-card">
+            <div class="skill-icon" style="background:rgba(82,217,138,0.15)">🎨</div>
+            <div class="skill-title">UI/UX Design</div>
+            <div class="skill-tags">
+                <span class="skill-tag">UX Research</span>
+                <span class="skill-tag">Benchmarking</span>
+                <span class="skill-tag">Prototipação</span>
+                <span class="skill-tag">Design Systems</span>
+            </div>
         </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(82,217,138,0.15)">🎨</div>
-        <div class="skill-title" data-pt="UX/UI Design" data-en="UX/UI Design">UX/UI Design</div>
-        <div class="skill-tags">
-          <span class="skill-tag" data-pt="UX Research" data-en="UX Research">UX Research</span>
-          <span class="skill-tag" data-pt="Benchmarking" data-en="User Interview">Benchmarking</span>
-          <span class="skill-tag" data-pt="Pesquisa" data-en="Research">Pesquisa</span>
-          <span class="skill-tag" data-pt="Prototipação" data-en="Prototyping">Prototipação</span>
+        <div class="skill-card">
+            <div class="skill-icon" style="background:rgba(39,174,96,0.1)">💻</div>
+            <div class="skill-title">Handoff & Dev</div>
+            <div class="skill-tags">
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Mobile First</span>
+                <span class="skill-tag">Auto-Layout</span>
+            </div>
         </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon" style="background:rgba(245,166,35,0.12)">🛠</div>
-        <div class="skill-title" data-pt="Ferramentas" data-en="Tools">Ferramentas</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Scrum</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">PgAdmin</span>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
-
-<!-- SOBRE -->
-<section id="sobre-mim">
-  <div class="section-label" data-pt="Sobre" data-en="About">Sobre</div>
-  <div class="section-title" data-pt="Sobre mim" data-en="About me">Sobre mim</div>
-  <div class="sobre-grid">
-    <div class="sobre-text">
-      <p data-pt="Comecei minha imersão na área de T.I há pouco mais de um ano, e logo me encontrei com o universo de Design digital — de como funciona a construção de um site ou aplicativo e de como o UI/UX Designer é extremamente importante para o desenvolvimento." data-en="I started my journey in tech just over a year ago, and quickly found myself drawn to the world of digital design — how websites and apps are built, and how crucial the UI/UX Designer is to the entire process.">Comecei minha imersão na área de T.I há pouco mais de um ano, e logo me encontrei com o universo de Design digital — de como funciona a construção de um site ou aplicativo e de como o UI/UX Designer é extremamente importante para o desenvolvimento.</p>
-      <p data-pt="Entendi que a base para um profissional completo passa pelo Desenvolvimento Web. Assim, iniciei meus estudos em HTML, CSS e JavaScript, descobrindo o fascínio de transformar layouts estáticos em plataformas dinâmicas e funcionais." data-en="I realized that a well-rounded professional needs Web Development foundations. So I started studying HTML, CSS and JavaScript, discovering the joy of turning static layouts into dynamic, functional platforms.">Entendi que a base para um profissional completo passa pelo Desenvolvimento Web. Assim, iniciei meus estudos em HTML, CSS e JavaScript, descobrindo o fascínio de transformar layouts estáticos em plataformas dinâmicas e funcionais.</p>
-      <p data-pt="Atualmente me aprofundo no curso superior de Desenvolvimento de Software Multiplataforma na FATEC. Meu foco agora é uma oportunidade de estágio ou trainee, onde poderei aplicar meu conhecimento técnico e crescer junto com a equipe." data-en="I'm currently deepening my knowledge in the Software Development program at FATEC. My goal now is an internship or trainee opportunity where I can apply my technical skills and grow alongside a team.">Atualmente me aprofundo no curso superior de Desenvolvimento de Software Multiplataforma na FATEC. Meu foco agora é uma oportunidade de estágio ou trainee, onde poderei aplicar meu conhecimento técnico e crescer junto com a equipe.</p>
-    </div>
-    <div class="sobre-highlight">
-      <div class="sobre-highlight-title" data-pt="Formação & Foco" data-en="Education & Focus">Formação & Foco</div>
-      <div class="sobre-item">
-        <div class="sobre-item-icon">🎓</div>
-        <div>
-          <div class="sobre-item-title">FATEC — DSM</div>
-          <div class="sobre-item-sub" data-pt="Desenvolvimento de Software Multiplataforma" data-en="Multiplatform Software Development">Desenvolvimento de Software Multiplataforma</div>
-        </div>
-      </div>
-      <div class="sobre-item">
-        <div class="sobre-item-icon">🎨</div>
-        <div>
-          <div class="sobre-item-title">UI/UX Designer</div>
-          <div class="sobre-item-sub" data-pt="Figma, prototipação e pesquisa com usuário" data-en="Figma, prototyping and user research">Figma, prototipação e pesquisa com usuário</div>
-        </div>
-      </div>
-      <div class="sobre-item">
-        <div class="sobre-item-icon">💻</div>
-        <div>
-          <div class="sobre-item-title" data-pt="Desenvolvedor Front-end" data-en="Front-end Developer">Desenvolvedor Front-end</div>
-          <div class="sobre-item-sub">HTML, CSS, JavaScript e Bootstrap</div>
-        </div>
-      </div>
-      <div class="sobre-item">
-        <div class="sobre-item-icon">🚀</div>
-        <div>
-          <div class="sobre-item-title" data-pt="Buscando estágio" data-en="Seeking internship">Buscando estágio</div>
-          <div class="sobre-item-sub" data-pt="Aberto a oportunidades de trainee e estágio" data-en="Open to trainee and internship opportunities">Aberto a oportunidades de trainee e estágio</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- CONTATO -->
-<div id="contato" class="contato-wrap">
-  <h2 data-pt="Vamos trabalhar juntos? 🤝" data-en="Let's work together? 🤝">Vamos trabalhar juntos? 🤝</h2>
-  <p data-pt="Se meu trabalho chamou sua atenção, entre em contato — adoraria colaborar com você!" data-en="If my work caught your attention, reach out — I'd love to collaborate with you!">Se meu trabalho chamou sua atenção, entre em contato — adoraria colaborar com você!</p>
-  <div class="contato-btns">
-    <a href="https://www.linkedin.com/in/pedro-sampaio-463a77375" target="_blank" class="btn-contato btn-linkedin">LinkedIn </a>
-    <a href="https://github.com/PedroSmp/Pedro-.git" target="_blank" class="btn-contato btn-github">GitHub </a>
-  </div>
-</div>
+<section id="sobre-mim">
+    <div class="section-label" data-pt="Sobre" data-en="About">Sobre</div>
+    <div class="section-title" data-pt="Minha Trajetória" data-en="My Journey">Minha Trajetória</div>
+    <div class="sobre-grid">
+        <div class="sobre-text">
+            <p data-pt="Minha jornada no Design nasceu da vontade de resolver problemas reais através da empatia. Acredito que o design não é apenas sobre estética, mas sobre como as pessoas se sentem ao interagir com um produto." data-en="My design journey was born from the desire to solve real problems through empathy. I believe design isn't just about aesthetics, but about how people feel when interacting with a product.">Minha jornada no Design nasceu da vontade de resolver problemas reais através da empatia. Acredito que o design não é apenas sobre estética, mas sobre como as pessoas se sentem ao interagir com um produto.</p>
+            <p data-pt="Com background técnico em Desenvolvimento de Software na FATEC, entendo as possibilidades e limitações da tecnologia, o que me permite criar designs que são ao mesmo tempo inovadores e viáveis para o desenvolvimento." data-en="With a technical background in Software Development at FATEC, I understand the possibilities and limitations of technology, allowing me to create designs that are both innovative and feasible for development.">Com background técnico em Desenvolvimento de Software na FATEC, entendo as possibilidades e limitações da tecnologia, o que me permite criar designs que são ao mesmo tempo inovadores e viáveis para o desenvolvimento.</p>
+        </div>
+    </div>
+</section>
 
-<!-- FOOTER -->
+<section id="contato" class="contato-wrap">
+    <h2 data-pt="Vamos criar algo incrível? 🤝" data-en="Let's build something amazing? 🤝">Vamos criar algo incrível? 🤝</h2>
+    <div class="contato-btns">
+        <a href="https://www.linkedin.com/in/pedro-sampaio-463a77375" target="_blank" class="btn-contato btn-linkedin">LinkedIn</a>
+        <a href="https://github.com/PedroSmp" target="_blank" class="btn-contato btn-github">GitHub</a>
+    </div>
+</section>
+
 <footer>
-  <span data-pt="Portfólio criado por" data-en="Portfolio by">Portfólio criado por</span> <span style="color:var(--blue);font-weight:800;">Pedro Sampaio</span> © 2025
+    <span data-pt="Criado com ❤️ por" data-en="Created with ❤️ by">Criado com ❤️ por</span> 
+    <span style="color:var(--blue);font-weight:800;">Pedro Sampaio</span> © 2026
 </footer>
 
-<!-- MODAL PROJETO -->
 <div class="proj-overlay" id="proj-overlay" onclick="closeProjModal(event)">
-  <div class="proj-modal">
-    <div class="carousel-container">
-      <div class="carousel-track" id="proj-modal-carousel">
+    <div class="proj-modal" onclick="event.stopPropagation()">
+        <div class="carousel-container">
+            <div class="carousel-track" id="proj-modal-carousel"></div>
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+            <div class="carousel-indicators" id="carousel-indicators"></div>
         </div>
-      <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
-      <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
-      <div class="carousel-indicators" id="carousel-indicators"></div>
-    </div>
-    <div class="proj-modal-body">
-      <div class="proj-modal-top">
-        <div>
-          <div id="proj-modal-tags" class="project-tags" style="margin-bottom:10px;"></div>
-          <div class="proj-modal-title" id="proj-modal-title"></div>
+
+        <div class="proj-modal-body">
+            <div class="proj-modal-top">
+                <div>
+                    <div id="proj-modal-tags" class="project-tags"></div>
+                    <div class="proj-modal-title" id="proj-modal-title"></div>
+                </div>
+                <button class="proj-modal-close" onclick="closeProjModal()">✕</button>
+            </div>
+
+            <div class="proj-modal-section">
+                <div class="proj-modal-section-title">Descrição</div>
+                <div class="proj-modal-desc" id="proj-modal-desc"></div>
+            </div>
+
+            <div class="proj-modal-section">
+                <div class="proj-modal-section-title">Meu Papel</div>
+                <div class="proj-modal-role" id="proj-modal-role"></div>
+            </div>
+
+            <div class="proj-modal-section">
+                <div class="proj-modal-section-title">Situação</div>
+                <div class="proj-modal-situation" id="proj-modal-situation"></div>
+            </div>
+
+            <div class="proj-modal-section">
+                <div class="proj-modal-section-title">Tecnologias</div>
+                <div class="proj-modal-techs" id="proj-modal-techs"></div>
+            </div>
+
+            <div class="proj-modal-footer">
+                <a class="btn-modal-notion" id="proj-modal-notion" href="#" target="_blank">📖 Ler Case Study</a>
+                <a class="btn-modal-primary" id="proj-modal-link" href="#" target="_blank">Ver Projeto ↗</a>
+            </div>
         </div>
-        <button class="proj-modal-close" onclick="document.getElementById('proj-overlay').classList.remove('open')">✕</button>
-      </div>
-
-      <div class="proj-modal-section">
-        <div class="proj-modal-section-title">Descrição</div>
-        <div class="proj-modal-desc" id="proj-modal-desc"></div>
-      </div>
-
-      <div class="proj-modal-section">
-        <div class="proj-modal-section-title">Meu papel no projeto</div>
-        <div class="proj-modal-role" id="proj-modal-role"></div>
-      </div>
-
-      <div class="proj-modal-section">
-        <div class="proj-modal-section-title">Situação do projeto</div>
-        <div class="proj-modal-situation" id="proj-modal-situation"></div>
-      </div>
-
-      <div class="proj-modal-section">
-        <div class="proj-modal-section-title">Tecnologias & Ferramentas</div>
-        <div class="proj-modal-techs" id="proj-modal-techs"></div>
-      </div>
-
-      <div class="proj-modal-footer">
-        <button class="btn-modal-secondary" onclick="document.getElementById('proj-overlay').classList.remove('open')"> Voltar</button>
-        <a class="btn-modal-primary" id="proj-modal-link" href="#" target="_blank">Ver no Figma / GitHub ↗</a>
-      </div>
     </div>
-  </div>
 </div>
 
 <script src="script.js"></script>

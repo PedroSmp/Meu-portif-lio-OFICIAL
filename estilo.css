@@ -360,6 +360,48 @@ nav {
   }
   .btn-modal-secondary:hover { border-color: var(--blue); color: var(--blue); }
 
+  /* Estilo do Botão do Notion no Modal */
+.btn-modal-notion {
+    display: none; /* O JS vai mudar para 'flex' quando houver link */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #f0f2f5; /* Cinza bem clarinho e elegante */
+    color: var(--navy);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: 1px solid var(--gray-light);
+    flex: 1; /* Faz ele dividir o espaço com o outro botão */
+}
+
+.btn-modal-notion:hover {
+    background-color: var(--gray-light);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Ajuste no footer para os botões ficarem lado a lado */
+.proj-modal-footer {
+    display: flex;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-light);
+    width: 100%;
+}
+
+/* Ajuste no botão principal para ele também crescer proporcionalmente */
+.btn-modal-primary {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ... o resto do seu estilo já existente ... */
+}
+
   /* ── NOVO CARROSSEL DO MODAL ── */
 .carousel-container {
     position: relative;
@@ -594,6 +636,9 @@ nav {
     .hero-stats { gap: 16px; }
     .hero-stat-num { font-size: 22px; }
     .contato-wrap h2 { font-size: 24px; }
+    .proj-modal-footer {
+        flex-direction: column;
+    }
   }
 
   /* ── CONTATO ── */
