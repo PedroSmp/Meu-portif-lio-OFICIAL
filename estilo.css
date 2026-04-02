@@ -403,33 +403,44 @@ nav {
 }
 
   /* ── NOVO CARROSSEL DO MODAL ── */
+  /* ── NOVO CARROSSEL DO MODAL (ROLAGEM VERTICAL) ── */
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 320px; /* Altura ideal para mobile e desktop */
+    height: 500px; /* Altura fixa do modal */
     overflow: hidden;
     background: #f8f8f8;
-    border-radius: 24px 24px 0 0;
+    border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .carousel-track {
     display: flex;
     width: 100%;
     height: 100%;
-    overflow-x: auto;
+    overflow-x: auto; /* Scroll horizontal entre as fotos */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
 }
+.carousel-track::-webkit-scrollbar { display: none; }
 
-.carousel-track::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-
-.carousel-track img {
+/* ESTE É O WRAPPER QUE PERMITE O SCROLL VERTICAL */
+.carousel-item-wrapper {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    overflow-y: auto; /* Permite rolar a imagem de cima a baixo */
     scroll-snap-align: start;
+    display: block; /* Importante para o scroll vertical funcionar */
+    background-color: #fff;
+}
+
+/* A IMAGEM DENTRO DO WRAPPER */
+.carousel-item-wrapper img {
+    width: 100%;      /* Força a largura do modal */
+    height: auto;     /* A altura cresce conforme o conteúdo do print */
+    display: block;
+    object-fit: contain; 
 }
 
 /* Setinhas de navegação */

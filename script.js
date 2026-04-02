@@ -102,10 +102,19 @@ function openProject(id) {
     indicators.innerHTML = '';
     if (p.images && Array.isArray(p.images)) {
         p.images.forEach((src, idx) => {
+            // 1. Criamos um container individual para cada imagem
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'carousel-item-wrapper'; // Classe para o CSS
+
+            // 2. Criamos a imagem
             const img = document.createElement('img');
             img.src = src;
-            track.appendChild(img);
             
+            // 3. Montamos a estrutura: imagem dentro da div, div dentro do track
+            imgContainer.appendChild(img);
+            track.appendChild(imgContainer);
+            
+            // 4. Criamos os indicadores (dots) - permanece igual
             const dot = document.createElement('div');
             dot.className = `dot ${idx === 0 ? 'active' : ''}`;
             indicators.appendChild(dot);
