@@ -11,8 +11,8 @@ const projects = {
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona_bemlar.png'
         ],
         tags: [{ label: 'UI/UX', cls: '' }, { label: 'Figma', cls: 'green' }],
-        desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico...',
-        role: 'Minha atuação na BemLar uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo...',
+        desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico. Decidi unir minha vivência pessoal às minhas habilidades de UI/UX para criar mais que um app: uma plataforma que valoriza essas profissionais. Com um design acolhedor e um fluxo de contratação simplificado, o foco é oferecer uma experiência eficiente, segura e, acima de tudo, humana para quem contrata e para quem presta o serviço.',
+        role: 'Minha atuação na BemLar uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo para entender o mercado de diaristas no Brasil e identificar lacunas em plataformas existentes. Como UX/UI Designer, projetei uma solução focada na realidade dessas profissionais, priorizando uma interface Mobile-First. O resultado é uma navegação fluida e acessível, garantindo que a tecnologia seja uma aliada simples e eficiente no dia a dia do usuário.',
         situation: 'Atualmente desenvolvendo os protótipos de alta fidelidade implementando responsividade e auto-layout.',
         techs: ['Figma', 'UI Design', 'UX Research', 'Prototipação', 'Notion'],
         link: 'https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1',
@@ -21,10 +21,13 @@ const projects = {
     },
     agrirs: {
         title: 'AgriRs',
-        images: ['https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png'],
+        images: [
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png',
+
+        ],
         tags: [{ label: 'Front-end', cls: '' }, { label: 'Scrum Master', cls: 'yellow' }],
-        desc: 'Site institucional desenvolvido para o laboratório AgriRs dentro do INPE.',
-        role: 'Assumi o papel de Scrum Master e contribuí no desenvolvimento front-end e UI/UX Design.',
+        desc: 'O AgriRs é um portal institucional desenvolvido para o laboratório de pesquisas agrícolas do INPE. O desafio era criar uma plataforma que centralizasse dados científicos e informações sobre o laboratório de forma profissional e acessível, servindo como a principal vitrine digital para pesquisadores e parceiros.',
+        role: 'Atuei com uma responsabilidade dupla: como Scrum Master, liderei a equipe na organização das sprints e cerimônias, garantindo que as entregas estivessem alinhadas às expectativas dos stakeholders. No design, fui responsável por transformar os requisitos técnicos em uma interface limpa e organizada, cuidando do protótipo no Figma e auxiliando na implementação Front-end (HTML/CSS/JS) para garantir a fidelidade visual.',
         situation: 'Projeto entregue e em breve disponível para acesso público. 🌟',
         techs: ['HTML', 'CSS', 'JavaScript', 'Scrum', 'Git'],
         link: 'https://github.com/404NotFound-ABP/AgriRSLAB_Portal.git',
@@ -32,10 +35,14 @@ const projects = {
     },
     aluramed: {
         title: 'AluraMed',
-        images: ['https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AluraMED.png'],
+        images: [
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AluraMED.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/double_diamond.png'
+        ],
         tags: [{ label: 'UX Research', cls: '' }, { label: 'Figma', cls: 'green' }],
-        desc: 'Produto de telemedicina focado em consultas online. Atuei identificando melhorias essenciais.',
-        role: 'Conduzi pesquisas com usuários e mapeamento de jornada para o agendamento.',
+        desc: 'O AluraMed é uma solução de telemedicina projetada para simplificar a conexão entre médicos e pacientes. O projeto foca em remover as barreiras tecnológicas do atendimento remoto, priorizando a acessibilidade e a confiança durante a jornada de agendamento e consulta online.',
+        role: 'Minha atuação foi focada em UX Research e estratégia. Conduzi um Benchmarking comparativo e utilizei o Mapeamento da Jornada do Usuário para identificar pontos de atrito no fluxo de agendamento. Com base nos dados coletados, propus funcionalidades que reduzem a carga cognitiva do usuário, como a organização clara de prontuários e históricos. Toda a documentação estratégica foi estruturada no Notion para guiar o design de alta fidelidade.',
         situation: 'Projeto entregue com protótipos de alta fidelidade disponíveis. 🌟',
         techs: ['Figma', 'UX Research', 'Jornada do Usuário'],
         link: 'https://www.figma.com/board/BL9qfcUznNXiTXNXN1VrHd?node-id=0-1',
@@ -43,9 +50,13 @@ const projects = {
     },
     eticket: {
         title: 'E-Ticket',
+        images: [
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/REI LEAO.svg',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/Home.svg',
+        ],
         tags: [{ label: 'UI Design', cls: '' }, { label: 'Figma', cls: 'green' }],
-        desc: 'App de venda de ingressos para shows e eventos.',
-        role: 'Responsável pelo Design System, componentes e fluxo mobile-first.',
+        desc: 'O E-Ticket é um aplicativo focado na venda e gestão de ingressos para eventos. O objetivo principal era criar um fluxo de compra extremamente rápido e visualmente atraente, capaz de suportar grandes volumes de informações (como datas, setores e preços) sem confundir o usuário.',
+        role: 'Como UI Designer, foquei na criação de um Design System escalável, utilizando componentes atômicos e Auto-layout no Figma para garantir consistência em todas as telas. Desenvolvi um fluxo de checkout focado em Mobile-first, otimizando a hierarquia visual para que as informações mais importantes (preço e confirmação) estivessem sempre em destaque. O resultado é uma interface moderna, vibrante e focada em conversão.',
         situation: 'Projeto em desenvolvimento, protótipos disponíveis.',
         techs: ['Figma', 'UI Design', 'Prototipação', 'Mobile First'],
         link: 'https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1',
