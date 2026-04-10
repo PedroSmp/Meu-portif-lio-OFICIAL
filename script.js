@@ -5,7 +5,6 @@ const projects = {
     bemlar: {
         title: 'Bem Lar',
         images: [
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/BemLAR.png',
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/DASHBOARD.png',
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/FINANÇAS.png',
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona_bemlar.png'
