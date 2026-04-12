@@ -601,44 +601,7 @@ nav {
   .nav-mobile-menu .mob-contact:hover { background: var(--blue); }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    nav { padding: 0 24px; gap: 12px; }
-    .nav-links, .nav-cta, .nav-cv, .lang-btn { display: none; }
-    .nav-hamburger { display: flex; }
-
-    .hero {
-      flex-direction: column-reverse; align-items: center;
-      padding: 100px 24px 60px; gap: 36px; text-align: center;
-    }
-    .hero-text p { max-width: 100%; }
-    .hero-text h1 { font-size: 36px; }
-    .hero-btns { justify-content: center; }
-    .hero-stats { justify-content: center; gap: 24px; }
-    .hero-photo img { width: 220px; height: 220px; }
-    .hero-badge { right: 0; bottom: 0; font-size: 12px; }
-
-    section { padding: 60px 24px; }
-
-    .projects-grid { grid-template-columns: 1fr; }
-
-    #minhas-habilidades { margin: 0 24px; padding: 40px 24px; }
-    .skills-grid { grid-template-columns: 1fr; gap: 14px; }
-
-    .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
-
-    .contato-wrap { margin: 0 24px 60px; padding: 40px 24px; }
-    .contato-btns { flex-direction: column; align-items: center; }
-
-    .proj-modal { width: 100%; border-radius: 20px 20px 0 0; }
-    .proj-overlay { align-items: flex-end; padding: 0; }
-    .proj-modal-body { padding: 24px 20px 28px; }
-    .proj-modal-img { height: 200px; border-radius: 20px 20px 0 0; }
-    .proj-modal-footer { flex-direction: column; }
-    .btn-modal-primary, .btn-modal-secondary { width: 100%; text-align: center; justify-content: center; }
-
-    footer { padding: 20px 24px; }
-  }
-
+  
   @media (max-width: 480px) {
     .hero-text h1 { font-size: 30px; }
     .hero-photo img { width: 180px; height: 180px; }
@@ -654,10 +617,16 @@ nav {
 
   /* ── CONTATO ── */
   .contato-wrap {
-    background: var(--navy); border-radius: var(--radius);
-    padding: 60px; text-align: center;
-    margin: 0 60px 80px;
-  }
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 60px;
+    text-align: center; /* Alinha o texto, botões e títulos no meio */
+    width: 100%;    /* Largura máxima elegante */
+    margin: 0 auto 80px; /* O 'auto' nas laterais centraliza o bloco todo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante que os itens internos fiquem no eixo central */
+}
 
   .contato-wrap h2 { font-size: 32px; font-weight: 900; color: white; margin-bottom: 10px; }
   .contato-wrap p { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.55); margin-bottom: 32px; }

@@ -10,27 +10,48 @@ const projects = {
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona_bemlar.png'
         ],
         tags: [{ label: 'UI/UX', cls: '' }, { label: 'Figma', cls: 'green' }],
-        desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico. Decidi unir minha vivência pessoal às minhas habilidades de UI/UX para criar mais que um app: uma plataforma que valoriza essas profissionais. Com um design acolhedor e um fluxo de contratação simplificado, o foco é oferecer uma experiência eficiente, segura e, acima de tudo, humana para quem contrata e para quem presta o serviço.',
-        role: 'Minha atuação na BemLar uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo para entender o mercado de diaristas no Brasil e identificar lacunas em plataformas existentes. Como UX/UI Designer, projetei uma solução focada na realidade dessas profissionais, priorizando uma interface Mobile-First. O resultado é uma navegação fluida e acessível, garantindo que a tecnologia seja uma aliada simples e eficiente no dia a dia do usuário.',
-        situation: 'Atualmente desenvolvendo os protótipos de alta fidelidade implementando responsividade e auto-layout.',
         techs: ['Figma', 'UI Design', 'UX Research', 'Prototipação', 'Notion'],
         link: 'https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1',
-        linkText: 'Ver Protótipo no Figma',
-        notionLink: 'https://www.notion.so/Bemlar-309743033bb680d6a74de850882c672a' // Adicionado aqui!
+        notionLink: 'https://www.notion.so/Bemlar-309743033bb680d6a74de850882c672a',
+        
+        // Textos em Português
+        pt: {
+            desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico. Decidi unir minha vivência pessoal às minhas habilidades de UI/UX para criar mais que um app: uma plataforma que valoriza essas profissionais. Com um design acolhedor e um fluxo de contratação simplificado, o foco é oferecer uma experiência eficiente, segura e, acima de tudo, humana.',
+            role: 'Minha atuação uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo para entender o mercado de diaristas e identificar lacunas. Como UI/UX Designer, projetei uma solução Mobile-First focada na acessibilidade, garantindo que a tecnologia seja uma aliada simples no dia a dia.',
+            situation: 'Atualmente desenvolvendo protótipos de alta fidelidade, implementando responsividade e auto-layout.',
+            linkText: 'Ver Protótipo no Figma'
+        },
+
+        // Textos em Inglês (Tradução)
+        en: {
+            desc: 'BemLar was born from observing the daily lives of my mother and many other women who dedicate their lives to domestic work. I combined my personal experience with UI/UX skills to create more than an app: a platform that values these professionals. With a welcoming design and simplified hiring flow, the focus is on providing an efficient, safe, and human experience.',
+            role: 'My work combined research and execution. As a UX Researcher, I conducted deep Benchmarking to understand the market and identify gaps. As a UI/UX Designer, I designed a Mobile-First solution focused on accessibility, ensuring technology is a simple ally in daily life.',
+            situation: 'Currently developing high-fidelity prototypes, implementing responsiveness and auto-layout.',
+            linkText: 'View Prototype on Figma'
+        }
     },
     agrirs: {
         title: 'AgriRs',
         images: [
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png',
-
         ],
         tags: [{ label: 'Front-end', cls: '' }, { label: 'Scrum Master', cls: 'yellow' }],
-        desc: 'O AgriRs é um portal institucional desenvolvido para o laboratório de pesquisas agrícolas do INPE. O desafio era criar uma plataforma que centralizasse dados científicos e informações sobre o laboratório de forma profissional e acessível, servindo como a principal vitrine digital para pesquisadores e parceiros.',
-        role: 'Atuei com uma responsabilidade dupla: como Scrum Master, liderei a equipe na organização das sprints e cerimônias, garantindo que as entregas estivessem alinhadas às expectativas dos stakeholders. No design, fui responsável por transformar os requisitos técnicos em uma interface limpa e organizada, cuidando do protótipo no Figma e auxiliando na implementação Front-end (HTML/CSS/JS) para garantir a fidelidade visual.',
-        situation: 'Projeto entregue e em breve disponível para acesso público. 🌟',
         techs: ['HTML', 'CSS', 'JavaScript', 'Scrum', 'Git'],
         link: 'https://github.com/404NotFound-ABP/AgriRSLAB_Portal.git',
-        linkText: 'Ver Código no GitHub'
+        
+        pt: {
+            desc: 'O AgriRs é um portal institucional desenvolvido para o laboratório de pesquisas agrícolas do INPE. O desafio era criar uma plataforma que centralizasse dados científicos e informações sobre o laboratório de forma profissional e acessível, servindo como a principal vitrine digital para pesquisadores e parceiros.',
+            role: 'Atuei com uma responsabilidade dupla: como Scrum Master, liderei a equipe na organização das sprints e cerimônias, garantindo que as entregas estivessem alinhadas às expectativas dos stakeholders. No design, fui responsável por transformar os requisitos técnicos em uma interface limpa e organizada, cuidando do protótipo no Figma e auxiliando na implementação Front-end (HTML/CSS/JS) para garantir a fidelidade visual.',
+            situation: 'Projeto entregue e em breve disponível para acesso público. 🌟',
+            linkText: 'Ver Código no GitHub'
+        },
+
+        en: {
+            desc: 'AgriRs is an institutional portal developed for the INPE agricultural research laboratory. The challenge was to create a platform that centralized scientific data and information about the laboratory in a professional and accessible way, serving as the main digital showcase for researchers and partners.',
+            role: 'I acted with a dual responsibility: as a Scrum Master, I led the team in organizing sprints and ceremonies, ensuring deliverables were aligned with stakeholder expectations. In design, I was responsible for transforming technical requirements into a clean and organized interface, taking care of the Figma prototype and assisting in Front-end implementation (HTML/CSS/JS) to ensure visual fidelity.',
+            situation: 'Project delivered and soon available for public access. 🌟',
+            linkText: 'View Code on GitHub'
+        }
     },
     aluramed: {
         title: 'AluraMed',
@@ -40,26 +61,48 @@ const projects = {
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/double_diamond.png'
         ],
         tags: [{ label: 'UX Research', cls: '' }, { label: 'Figma', cls: 'green' }],
-        desc: 'O AluraMed é uma solução de telemedicina projetada para simplificar a conexão entre médicos e pacientes. O projeto foca em remover as barreiras tecnológicas do atendimento remoto, priorizando a acessibilidade e a confiança durante a jornada de agendamento e consulta online.',
-        role: 'Minha atuação foi focada em UX Research e estratégia. Conduzi um Benchmarking comparativo e utilizei o Mapeamento da Jornada do Usuário para identificar pontos de atrito no fluxo de agendamento. Com base nos dados coletados, propus funcionalidades que reduzem a carga cognitiva do usuário, como a organização clara de prontuários e históricos. Toda a documentação estratégica foi estruturada no Notion para guiar o design de alta fidelidade.',
-        situation: 'Projeto entregue com protótipos de alta fidelidade disponíveis. 🌟',
         techs: ['Figma', 'UX Research', 'Jornada do Usuário'],
         link: 'https://www.figma.com/board/BL9qfcUznNXiTXNXN1VrHd?node-id=0-1',
-        linkText: 'Ver Protótipo no Figma'
+        notionLink:'https://www.notion.so/Aluramed-1ca17d38ce1d813690b9f1a2549840ea',
+        
+        pt: {
+            desc: 'O AluraMed é uma solução de telemedicina projetada para simplificar a conexão entre médicos e pacientes. O projeto foca em remover as barreiras tecnológicas do atendimento remoto, priorizando a acessibilidade e a confiança durante a jornada de agendamento e consulta online.',
+            role: 'Minha atuação foi focada em UX Research e estratégia. Conduzi um Benchmarking comparativo e utilizei o Mapeamento da Jornada do Usuário para identificar pontos de atrito no fluxo de agendamento. Com base nos dados coletados, propus funcionalidades que reduzem a carga cognitiva do usuário, como a organização clara de prontuários e históricos. Toda a documentação estratégica foi estruturada no Notion para guiar o design de alta fidelidade.',
+            situation: 'Projeto entregue com protótipos de alta fidelidade disponíveis. 🌟',
+            linkText: 'Ver Protótipo no Figma'
+        },
+
+        en: {
+            desc: 'AluraMed is a telemedicine solution designed to simplify the connection between doctors and patients. The project focuses on removing technological barriers from remote care, prioritizing accessibility and trust during the scheduling and online consultation journey.',
+            role: 'My role was focused on UX Research and strategy. I conducted comparative Benchmarking and used User Journey Mapping to identify friction points in the scheduling flow. Based on the collected data, I proposed features that reduce the user\'s cognitive load, such as the clear organization of medical records and histories. All strategic documentation was structured in Notion to guide high-fidelity design.',
+            situation: 'Project delivered with high-fidelity prototypes available. 🌟',
+            linkText: 'View Prototype on Figma'
+        }
     },
-    eticket: {
+   eticket: {
         title: 'E-Ticket',
         images: [
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/REI LEAO.svg',
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/Home.svg',
         ],
         tags: [{ label: 'UI Design', cls: '' }, { label: 'Figma', cls: 'green' }],
-        desc: 'O E-Ticket é um aplicativo focado na venda e gestão de ingressos para eventos. O objetivo principal era criar um fluxo de compra extremamente rápido e visualmente atraente, capaz de suportar grandes volumes de informações (como datas, setores e preços) sem confundir o usuário.',
-        role: 'Como UI Designer, foquei na criação de um Design System escalável, utilizando componentes atômicos e Auto-layout no Figma para garantir consistência em todas as telas. Desenvolvi um fluxo de checkout focado em Mobile-first, otimizando a hierarquia visual para que as informações mais importantes (preço e confirmação) estivessem sempre em destaque. O resultado é uma interface moderna, vibrante e focada em conversão.',
-        situation: 'Projeto em desenvolvimento, protótipos disponíveis.',
         techs: ['Figma', 'UI Design', 'Prototipação', 'Mobile First'],
         link: 'https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1',
-        linkText: 'Ver Protótipo no Figma'
+        notionLink: 'https://www.notion.so/E-ticket-1ca17d38ce1d81c4b2ffce253c79df3a',
+        
+        pt: {
+            desc: 'O E-Ticket é um aplicativo focado na venda e gestão de ingressos para eventos. O objetivo principal era criar um fluxo de compra extremamente rápido e visualmente atraente, capaz de suportar grandes volumes de informações (como datas, setores e preços) sem confundir o usuário.',
+            role: 'Como UI Designer, foquei na criação de um Design System escalável, utilizando componentes atômicos e Auto-layout no Figma para garantir consistência em todas as telas. Desenvolvi um fluxo de checkout focado em Mobile-first, otimizando a hierarquia visual para que as informações mais importantes (preço e confirmação) estivessem sempre em destaque. O resultado é uma interface moderna, vibrante e focada em conversão.',
+            situation: 'Projeto em desenvolvimento, protótipos disponíveis.',
+            linkText: 'Ver Protótipo no Figma'
+        },
+
+        en: {
+            desc: 'E-Ticket is an app focused on event ticket sales and management. The main goal was to create an extremely fast and visually appealing purchase flow, capable of supporting large volumes of information (such as dates, seating sectors, and prices) without confusing the user.',
+            role: 'As a UI Designer, I focused on creating a scalable Design System, using atomic components and Auto-layout in Figma to ensure consistency across all screens. I developed a Mobile-first checkout flow, optimizing the visual hierarchy so that the most important information (price and confirmation) was always highlighted. The result is a modern, vibrant, and conversion-focused interface.',
+            situation: 'Project in development, prototypes available.',
+            linkText: 'View Prototype on Figma'
+        }
     }
 };
 
@@ -93,11 +136,17 @@ function closeMenu() {
 /* -----------------------------------------------------------
    3. MODAL DE PROJETOS
 ----------------------------------------------------------- */
+/* -----------------------------------------------------------
+   3. MODAL DE PROJETOS (VERSÃO À PROVA DE BALAS)
+----------------------------------------------------------- */
 function openProject(id) {
     const p = projects[id];
     if (!p) return;
 
-    // Elementos do Modal
+    const lang = currentLang || 'pt';
+    const langData = p[lang] || p;
+
+    // Elementos do Modal (O JS vai procurar esses IDs no HTML)
     const track = document.getElementById('proj-modal-carousel');
     const indicators = document.getElementById('carousel-indicators');
     const titleEl = document.getElementById('proj-modal-title');
@@ -107,70 +156,78 @@ function openProject(id) {
     const notionBtn = document.getElementById('proj-modal-notion');
     const btnLink = document.getElementById('proj-modal-link');
 
-    // 1. Limpar e carregar carrossel
-    track.innerHTML = '';
-    indicators.innerHTML = '';
-    if (p.images && Array.isArray(p.images)) {
-        p.images.forEach((src, idx) => {
-            // 1. Criamos um container individual para cada imagem
-            const imgContainer = document.createElement('div');
-            imgContainer.className = 'carousel-item-wrapper'; // Classe para o CSS
+    // --- 1. PREENCHER TEXTOS (COM VERIFICAÇÃO) ---
+    if (titleEl) titleEl.textContent = p.title;
+    if (descEl) descEl.textContent = langData.desc || "Descrição não disponível.";
+    if (roleEl) roleEl.textContent = langData.role;
+    if (situationEl) situationEl.textContent = langData.situation || "Status não informado";
 
-            // 2. Criamos a imagem
-            const img = document.createElement('img');
-            img.src = src;
-            
-            // 3. Montamos a estrutura: imagem dentro da div, div dentro do track
-            imgContainer.appendChild(img);
-            track.appendChild(imgContainer);
-            
-            // 4. Criamos os indicadores (dots) - permanece igual
-            const dot = document.createElement('div');
-            dot.className = `dot ${idx === 0 ? 'active' : ''}`;
-            indicators.appendChild(dot);
-        });
+    // --- 2. CARREGAR CARROSSEL ---
+    if (track && indicators) {
+        track.innerHTML = '';
+        indicators.innerHTML = '';
+        if (p.images && Array.isArray(p.images)) {
+            p.images.forEach((src, idx) => {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'carousel-item-wrapper';
+                const img = document.createElement('img');
+                img.src = src;
+                imgContainer.appendChild(img);
+                track.appendChild(imgContainer);
+                
+                const dot = document.createElement('div');
+                dot.className = `dot ${idx === 0 ? 'active' : ''}`;
+                indicators.appendChild(dot);
+            });
+        }
     }
 
-    // 2. Preencher Textos
-    if (titleEl) titleEl.textContent = p.title;
-    if (descEl) descEl.textContent = p.desc || "Descrição não disponível.";
-    if (roleEl) roleEl.textContent = p.role;
-    if (situationEl) situationEl.textContent = p.situation || "Status não informado";
-
-    // 3. Lógica do Botão do Notion
+    // --- 3. LÓGICA DO BOTÃO DO NOTION ---
     if (notionBtn) {
         if (p.notionLink) {
             notionBtn.href = p.notionLink;
             notionBtn.style.display = 'flex';
+            
+            // Verifica se o botão tem um <span> dentro antes de tentar mudar
+            const spanInside = notionBtn.querySelector('span');
+            if (spanInside) {
+                spanInside.textContent = lang === 'pt' ? 'Ver no Notion' : 'View on Notion';
+            } else {
+                notionBtn.textContent = lang === 'pt' ? 'Ver no Notion' : 'View on Notion';
+            }
         } else {
             notionBtn.style.display = 'none';
         }
     }
 
-    // 4. Lógica do Botão Principal (Figma vs GitHub)
+    // --- 4. LÓGICA DO BOTÃO PRINCIPAL ---
     if (btnLink) {
         btnLink.href = p.link;
-        btnLink.textContent = p.linkText || 'Ver Projeto ↗';
+        btnLink.textContent = langData.linkText || (lang === 'pt' ? 'Ver Projeto ↗' : 'View Project ↗');
         
-        // Estilização dinâmica baseada no link
         if (p.link.includes('github.com')) {
             btnLink.style.backgroundColor = '#24292e'; // Preto GitHub
         } else if (p.link.includes('figma.com')) {
             btnLink.style.backgroundColor = '#F24E1E'; // Laranja Figma
         } else {
-            btnLink.style.backgroundColor = 'var(--blue)';
+            btnLink.style.backgroundColor = 'var(--blue)'; // Azul Padrão
         }
     }
 
-    // 5. Tags e Tecnologias
+    // --- 5. TAGS E TECNOLOGIAS ---
     const tagsEl = document.getElementById('proj-modal-tags');
     const techsEl = document.getElementById('proj-modal-techs');
-    if (tagsEl) tagsEl.innerHTML = p.tags.map(t => `<span class="project-tag ${t.cls}">${t.label}</span>`).join('');
-    if (techsEl) techsEl.innerHTML = p.techs.map(t => `<span class="proj-modal-tech">${t}</span>`).join('');
+    if (tagsEl && p.tags) {
+        tagsEl.innerHTML = p.tags.map(t => `<span class="project-tag ${t.cls}">${t.label}</span>`).join('');
+    }
+    if (techsEl && p.techs) {
+        techsEl.innerHTML = p.techs.map(t => `<span class="proj-modal-tech">${t}</span>`).join('');
+    }
 
-    // 6. Exibir Modal
-    track.scrollLeft = 0;
-    document.getElementById('proj-overlay').classList.add('open');
+    // --- 6. EXIBIR MODAL ---
+    if (track) track.scrollLeft = 0;
+    const overlay = document.getElementById('proj-overlay');
+    if (overlay) overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
 }
 
