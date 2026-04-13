@@ -601,6 +601,63 @@ nav {
   .nav-mobile-menu .mob-contact:hover { background: var(--blue); }
 
   /* ── RESPONSIVE ── */
+
+  /* ── RESPONSIVIDADE (AJUSTE PARA CELULAR E TABLET) ── */
+@media (max-width: 900px) {
+    
+    /* 1. Ajuste de Respiros Gerais */
+    nav { padding: 0 20px; }
+    section { padding: 60px 20px; }
+    #minhas-habilidades { margin: 0 20px; padding: 40px 20px; }
+
+    /* 2. Menu Navegação */
+    /* Esconde os links e botões normais e mostra o hambúrguer */
+    .nav-links, .nav-actions { display: none; }
+    .nav-hamburger { display: flex; }
+
+    /* 3. Hero (Foto em cima, Texto embaixo) */
+    .hero {
+        flex-direction: column-reverse; /* Foto sobe, texto desce */
+        align-items: center;
+        padding: 100px 20px 60px; 
+        gap: 40px; 
+        text-align: center;
+    }
+    .hero-text p { margin: 0 auto 32px; max-width: 100%; }
+    .hero-text h1 { font-size: 34px; }
+    .hero-btns { justify-content: center; }
+    .hero-stats { justify-content: center; gap: 24px; flex-wrap: wrap; }
+    
+    .hero-photo img { width: 220px; height: 220px; }
+    .hero-badge { display: none; } /* Esconde o badge no mobile para não poluir */
+
+    /* 4. Grades (Tudo em 1 coluna) */
+    .projects-grid { grid-template-columns: 1fr; gap: 24px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
+
+    /* 5. Contato */
+    .contato-wrap { margin: 0 20px 60px; padding: 40px 20px; }
+    .contato-wrap h2 { font-size: 26px; }
+
+    /* 6. Modal de Projeto */
+    .proj-modal { 
+        width: 100%; 
+        height: 100%; 
+        max-height: 100vh; 
+        border-radius: 0; 
+    }
+    .carousel-container { height: 350px; }
+    .proj-modal-body { padding: 24px 20px; }
+    .proj-modal-footer { flex-direction: column; }
+    .btn-modal-primary, .btn-modal-notion { width: 100%; }
+}
+
+/* 7. Ajuste para telas muito pequenas (iPhone SE, etc) */
+@media (max-width: 380px) {
+    .hero-text h1 { font-size: 28px; }
+    .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+}
   
   @media (max-width: 480px) {
     .hero-text h1 { font-size: 30px; }
