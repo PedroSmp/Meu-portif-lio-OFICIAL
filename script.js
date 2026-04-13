@@ -79,31 +79,6 @@ const projects = {
             linkText: 'View Prototype on Figma'
         }
     },
-   eticket: {
-        title: 'E-Ticket',
-        images: [
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/REI LEAO.svg',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/Home.svg',
-        ],
-        tags: [{ label: 'UI Design', cls: '' }, { label: 'Figma', cls: 'green' }],
-        techs: ['Figma', 'UI Design', 'Prototipação', 'Mobile First'],
-        link: 'https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1',
-        notionLink: 'https://www.notion.so/E-ticket-1ca17d38ce1d81c4b2ffce253c79df3a',
-        
-        pt: {
-            desc: 'O E-Ticket é um aplicativo focado na venda e gestão de ingressos para eventos. O objetivo principal era criar um fluxo de compra extremamente rápido e visualmente atraente, capaz de suportar grandes volumes de informações (como datas, setores e preços) sem confundir o usuário.',
-            role: 'Como UI Designer, foquei na criação de um Design System escalável, utilizando componentes atômicos e Auto-layout no Figma para garantir consistência em todas as telas. Desenvolvi um fluxo de checkout focado em Mobile-first, otimizando a hierarquia visual para que as informações mais importantes (preço e confirmação) estivessem sempre em destaque. O resultado é uma interface moderna, vibrante e focada em conversão.',
-            situation: 'Projeto em desenvolvimento, protótipos disponíveis.',
-            linkText: 'Ver Protótipo no Figma'
-        },
-
-        en: {
-            desc: 'E-Ticket is an app focused on event ticket sales and management. The main goal was to create an extremely fast and visually appealing purchase flow, capable of supporting large volumes of information (such as dates, seating sectors, and prices) without confusing the user.',
-            role: 'As a UI Designer, I focused on creating a scalable Design System, using atomic components and Auto-layout in Figma to ensure consistency across all screens. I developed a Mobile-first checkout flow, optimizing the visual hierarchy so that the most important information (price and confirmation) was always highlighted. The result is a modern, vibrant, and conversion-focused interface.',
-            situation: 'Project in development, prototypes available.',
-            linkText: 'View Prototype on Figma'
-        }
-    }
 };
 
 /* -----------------------------------------------------------
