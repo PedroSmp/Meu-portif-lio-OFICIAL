@@ -7,7 +7,9 @@ const projects = {
         images: [
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/DASHBOARD.png',
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/FINANÇAS.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona_bemlar.png'
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona_bemlar.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/pagina inicial-mobile.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/Agenda.png'
         ],
         tags: [{ label: 'UI/UX', cls: '' }, { label: 'Figma', cls: 'green' }],
         techs: ['Figma', 'UI Design', 'UX Research', 'Prototipação', 'Notion'],
@@ -18,7 +20,7 @@ const projects = {
         pt: {
             desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico. Decidi unir minha vivência pessoal às minhas habilidades de UI/UX para criar mais que um app: uma plataforma que valoriza essas profissionais. Com um design acolhedor e um fluxo de contratação simplificado, o foco é oferecer uma experiência eficiente, segura e, acima de tudo, humana.',
             role: 'Minha atuação uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo para entender o mercado de diaristas e identificar lacunas. Como UI/UX Designer, projetei uma solução Mobile-First focada na acessibilidade, garantindo que a tecnologia seja uma aliada simples no dia a dia.',
-            situation: 'Atualmente desenvolvendo protótipos de alta fidelidade, implementando responsividade e auto-layout.',
+            situation: 'Projeto concluído.🌟',
             linkText: 'Ver Protótipo no Figma'
         },
 
@@ -26,7 +28,7 @@ const projects = {
         en: {
             desc: 'BemLar was born from observing the daily lives of my mother and many other women who dedicate their lives to domestic work. I combined my personal experience with UI/UX skills to create more than an app: a platform that values these professionals. With a welcoming design and simplified hiring flow, the focus is on providing an efficient, safe, and human experience.',
             role: 'My work combined research and execution. As a UX Researcher, I conducted deep Benchmarking to understand the market and identify gaps. As a UI/UX Designer, I designed a Mobile-First solution focused on accessibility, ensuring technology is a simple ally in daily life.',
-            situation: 'Currently developing high-fidelity prototypes, implementing responsiveness and auto-layout.',
+            situation: 'Project completed.🌟',
             linkText: 'View Prototype on Figma'
         }
     },
