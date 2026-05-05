@@ -13,7 +13,7 @@ const projects = {
         ],
         tags: [{ label: 'UI/UX', cls: '' }, { label: 'Figma', cls: 'green' }],
         techs: ['Figma', 'UI Design', 'UX Research', 'Prototipação', 'Notion'],
-        link: 'https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1',
+        link: 'https://www.figma.com/design/msJsyd6SJ5BCiLVwOArvRh/BEMLAR?node-id=0-1&t=5iWouKqs1l9bVKzl-1',
         notionLink: 'https://www.notion.so/Bemlar-309743033bb680d6a74de850882c672a',
         
         // Textos em Português
