@@ -1,252 +1,313 @@
-/* -----------------------------------------------------------
-   1. CONFIGURAÇÃO DOS PROJETOS (DADOS)
------------------------------------------------------------ */
-const projects = {
-    bemlar: {
-        title: 'Bem Lar',
-        images: [
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/DASHBOARD.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/FINANÇAS.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona_bemlar.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/pagina inicial-mobile.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/Agenda.png'
-        ],
-        tags: [{ label: 'UI/UX', cls: '' }, { label: 'Figma', cls: 'green' }],
-        techs: ['Figma', 'UI Design', 'UX Research', 'Prototipação', 'Notion'],
-        link: 'https://www.figma.com/design/msJsyd6SJ5BCiLVwOArvRh/BEMLAR?node-id=0-1&t=5iWouKqs1l9bVKzl-1',
-        notionLink: 'https://www.notion.so/Bemlar-309743033bb680d6a74de850882c672a',
-        
-        // Textos em Português
-        pt: {
-            desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico. Decidi unir minha vivência pessoal às minhas habilidades de UI/UX para criar mais que um app: uma plataforma que valoriza essas profissionais. Com um design acolhedor e um fluxo de contratação simplificado, o foco é oferecer uma experiência eficiente, segura e, acima de tudo, humana.',
-            role: 'Minha atuação uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo para entender o mercado de diaristas e identificar lacunas. Como UI/UX Designer, projetei uma solução Mobile-First focada na acessibilidade, garantindo que a tecnologia seja uma aliada simples no dia a dia.',
-            situation: 'Projeto concluído.🌟',
-            linkText: 'Ver Protótipo no Figma'
-        },
+// Variáveis globais para controlar o carrossel
+let currentImages = [];
+let currentIndex = 0;
 
-        // Textos em Inglês (Tradução)
-        en: {
-            desc: 'BemLar was born from observing the daily lives of my mother and many other women who dedicate their lives to domestic work. I combined my personal experience with UI/UX skills to create more than an app: a platform that values these professionals. With a welcoming design and simplified hiring flow, the focus is on providing an efficient, safe, and human experience.',
-            role: 'My work combined research and execution. As a UX Researcher, I conducted deep Benchmarking to understand the market and identify gaps. As a UI/UX Designer, I designed a Mobile-First solution focused on accessibility, ensuring technology is a simple ally in daily life.',
-            situation: 'Project completed.🌟',
-            linkText: 'View Prototype on Figma'
-        }
-    },
-    agrirs: {
-        title: 'AgriRs',
-        images: [
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png',
-        ],
-        tags: [{ label: 'Front-end', cls: '' }, { label: 'Scrum Master', cls: 'yellow' }],
-        techs: ['HTML', 'CSS', 'JavaScript', 'Scrum', 'Git'],
-        link: 'https://github.com/404NotFound-ABP/AgriRSLAB_Portal.git',
-        
-        pt: {
-            desc: 'O AgriRs é um portal institucional desenvolvido para o laboratório de pesquisas agrícolas do INPE. O desafio era criar uma plataforma que centralizasse dados científicos e informações sobre o laboratório de forma profissional e acessível, servindo como a principal vitrine digital para pesquisadores e parceiros.',
-            role: 'Atuei com uma responsabilidade dupla: como Scrum Master, liderei a equipe na organização das sprints e cerimônias, garantindo que as entregas estivessem alinhadas às expectativas dos stakeholders. No design, fui responsável por transformar os requisitos técnicos em uma interface limpa e organizada, cuidando do protótipo no Figma e auxiliando na implementação Front-end (HTML/CSS/JS) para garantir a fidelidade visual.',
-            situation: 'Projeto entregue e em breve disponível para acesso público. 🌟',
-            linkText: 'Ver Código no GitHub'
-        },
+const data = {
+  bemlar: {
+    bar: 'Bem Lar — UI/UX Project',
+    // 1. TODAS AS SUAS NOVAS IMAGENS ENTRARAM AQUI NA LISTA:
+    images: [
+      './fotos/capa_bemlar.png',
+      './fotos/Agenda.png',
+      './fotos/DASHBOARD.png',
+      './fotos/FINANÇAS.png',
+      './fotos/pagina inicial-mobile.png',
+      './fotos/persona_bemlar.png'
+    ],
+    body: `
+      <div class="project-container">
+        <div class="project-top-grid">
+          <div class="project-carousel">
+            <button class="carousel-arrow left" onclick="prevImage(event)">‹</button>
+            
+            <img id="carousel-img" src="./fotos/capa_bemlar.png" alt="Case Bem Lar" onerror="this.style.opacity='0.5';">
+            
+            <button class="carousel-arrow right" onclick="nextImage(event)">›</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+          </div>
 
-        en: {
-            desc: 'AgriRs is an institutional portal developed for the INPE agricultural research laboratory. The challenge was to create a platform that centralized scientific data and information about the laboratory in a professional and accessible way, serving as the main digital showcase for researchers and partners.',
-            role: 'I acted with a dual responsibility: as a Scrum Master, I led the team in organizing sprints and ceremonies, ensuring deliverables were aligned with stakeholder expectations. In design, I was responsible for transforming technical requirements into a clean and organized interface, taking care of the Figma prototype and assisting in Front-end implementation (HTML/CSS/JS) to ensure visual fidelity.',
-            situation: 'Project delivered and soon available for public access. 🌟',
-            linkText: 'View Code on GitHub'
-        }
-    },
-    aluramed: {
-        title: 'AluraMed',
-        images: [
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AluraMED.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/persona.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/double_diamond.png'
-        ],
-        tags: [{ label: 'UX Research', cls: '' }, { label: 'Figma', cls: 'green' }],
-        techs: ['Figma', 'UX Research', 'Jornada do Usuário'],
-        link: 'https://www.figma.com/board/BL9qfcUznNXiTXNXN1VrHd?node-id=0-1',
-        notionLink:'https://www.notion.so/Aluramed-1ca17d38ce1d813690b9f1a2549840ea',
-        
-        pt: {
-            desc: 'O AluraMed é uma solução de telemedicina projetada para simplificar a conexão entre médicos e pacientes. O projeto foca em remover as barreiras tecnológicas do atendimento remoto, priorizando a acessibilidade e a confiança durante a jornada de agendamento e consulta online.',
-            role: 'Minha atuação foi focada em UX Research e estratégia. Conduzi um Benchmarking comparativo e utilizei o Mapeamento da Jornada do Usuário para identificar pontos de atrito no fluxo de agendamento. Com base nos dados coletados, propus funcionalidades que reduzem a carga cognitiva do usuário, como a organização clara de prontuários e históricos. Toda a documentação estratégica foi estruturada no Notion para guiar o design de alta fidelidade.',
-            situation: 'Projeto entregue com protótipos de alta fidelidade disponíveis. 🌟',
-            linkText: 'Ver Protótipo no Figma'
-        },
+          <div class="project-info">
+            <h2>Bem Lar</h2>
+            <p>Plataforma mobile para conectar profissionais de limpeza doméstica a clientes, com foco em valorização profissional, impacto social e acessibilidade.</p>
+            <div class="project-tags-grid">
+              <span class="tag-new">UI/UX</span>
+              <span class="tag-new">Figma</span>
+              <span class="tag-new">Mobile First</span>
+              <span class="tag-new">UX Writing</span>
+            </div>
+          </div>
+        </div>
 
-        en: {
-            desc: 'AluraMed is a telemedicine solution designed to simplify the connection between doctors and patients. The project focuses on removing technological barriers from remote care, prioritizing accessibility and trust during the scheduling and online consultation journey.',
-            role: 'My role was focused on UX Research and strategy. I conducted comparative Benchmarking and used User Journey Mapping to identify friction points in the scheduling flow. Based on the collected data, I proposed features that reduce the user\'s cognitive load, such as the clear organization of medical records and histories. All strategic documentation was structured in Notion to guide high-fidelity design.',
-            situation: 'Project delivered with high-fidelity prototypes available. 🌟',
-            linkText: 'View Prototype on Figma'
-        }
-    },
+        <div class="project-bottom-row">
+          <div class="project-role-desc">
+            Idealizei o projeto a partir de uma vivência pessoal, sendo responsável por conduzir o UX Research, benchmarking comparativo, mapeamento de fluxos e prototipação de alta fidelidade.
+          </div>
+          <div class="project-actions">
+            <a href="https://www.figma.com/design/msJsyd6SJ5BCiLVwOArvRh" target="_blank" class="btn-custom btn-figma-orange">Figma</a>
+            <a href="https://www.notion.so/Bemlar-309743033bb680d6a74de850882c672a" target="_blank" class="btn-custom btn-notion-gray">Notion</a>
+          </div>
+        </div>
+      </div>
+    `,
+    footer: ``
+  },
+  agrirs: {
+    bar: 'AgriRs — Front-end + Scrum',
+    images: [
+      './fotos/AgriRs.png'
+    ],
+    body: `
+      <div class="project-container">
+        <div class="project-top-grid">
+          <div class="project-carousel">
+            <button class="carousel-arrow left" onclick="prevImage(event)">‹</button>
+            <img id="carousel-img" src="./fotos/AgriRs.png" alt="Interface AgriRs" onerror="this.style.opacity='0.5';">
+            <button class="carousel-arrow right" onclick="nextImage(event)">›</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+          </div>
+
+          <div class="project-info">
+            <h2>AgriRs</h2>
+            <p>Portal institucional desenvolvido para o laboratório agrícola do INPE, integrando uma experiência visual moderna à organization de metodologias ágeis.</p>
+            <div class="project-tags-grid">
+              <span class="tag-new">UI Design</span>
+              <span class="tag-new">HTML/CSS/JS</span>
+              <span class="tag-new">Scrum Master</span>
+              <span class="tag-new">Git</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-bottom-row">
+          <div class="project-role-desc">
+            Atuei na liderança dos processos como Scrum Master e no desenvolvimento do UI Design, cobrindo desde a concepção dos protótipos no Figma até a implementação completa do front-end.
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/404NotFound-ABP/AgriRSLAB_Portal.git" target="_blank" class="btn-custom" style="background:#24292e; color:white;">GitHub</a>
+          </div>
+        </div>
+      </div>
+    `,
+    footer: ``
+  },
+  aluramed: {
+    bar: 'Projeto entregue com sucesso !',
+    images: [
+      './fotos/double_diamond.jpg',
+      './fotos/persona_aluramed.jpg'
+    ],
+    body: `
+      <div class="project-container">
+        <div class="project-top-grid">
+          <div class="project-carousel">
+            <button class="carousel-arrow left" onclick="prevImage(event)">‹</button>
+            <img id="carousel-img" src="./fotos/double_diamond.jpg" alt="Persona AluraMed" onerror="this.style.opacity='0.5';">
+            <button class="carousel-arrow right" onclick="nextImage(event)">›</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+          </div>
+
+          <div class="project-info">
+            <h2>AluraMed</h2>
+            <p>Telemedicina focada em acessibilidade e jornada do paciente.</p>
+            <div class="project-tags-grid">
+              <span class="tag-new">UX Research</span>
+              <span class="tag-new">Figma</span>
+              <span class="tag-new">Double diamond</span>
+              <span class="tag-new">Persona</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-bottom-row">
+          <div class="project-role-desc">
+            Conduzi benchmarking comparativo e mapeamento detalhado da jornada do usuário para mitigar pontos de fricção e reduzir o atrito no fluxo de agendamentos.
+          </div>
+          <div class="project-actions">
+            <a href="https://www.figma.com/board/BL9qfcUznNXiTXNXN1VrHd" target="_blank" class="btn-custom btn-figma-orange">Figma</a>
+            <a href="https://www.notion.so/Aluramed-1ca17d38ce1d813690b9f1a2549840ea" target="_blank" class="btn-custom btn-notion-gray">Notion</a>
+          </div>
+        </div>
+      </div>
+    `,
+    footer: ``
+  },
+  sobre: {
+    bar: 'Pedro Sampaio — Perfil',
+    body: `
+      <div class="perfil-wrap">
+        <div class="perfil-foto-col">
+          <div class="perfil-foto">
+            <img src="./fotos/euu.jpg" alt="Pedro Sampaio" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\\'perfil-foto-placeholder\\'><i class=\\'ti ti-user\\'></i></div>'">
+          </div>
+        </div>
+        <div class="perfil-info-col">
+          <div class="perfil-nome">Pedro Sampaio</div>
+          <div class="perfil-email">UI/UX Designer · FATEC DSM</div>
+          <div class="perfil-stats-grid">
+            <div class="perfil-stat"><div class="perfil-stat-num">3</div><div class="perfil-stat-lbl">projetos</div></div>
+            <div class="perfil-stat"><div class="perfil-stat-num">#1</div><div class="perfil-stat-lbl">Figma</div></div>
+            <div class="perfil-stat"><div class="perfil-stat-num">2+</div><div class="perfil-stat-lbl">anos UX</div></div>
+            <div class="perfil-stat"><div class="perfil-stat-num">DSM</div><div class="perfil-stat-lbl">FATEC</div></div>
+          </div>
+          <div class="perfil-bio">Descobri UI/UX pelo YouTube e me apaixonei por criar produtos digitais que fazem diferença. Busco unir empatia do design com viabilidade técnica.</div>
+          <div class="perfil-social-row">
+            <a class="perfil-social-btn" href="https://www.linkedin.com/in/pedro-sampaio-463a77375" target="_blank"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+            <a class="perfil-social-btn" href="https://github.com/PedroSmp" target="_blank"><i class="ti ti-brand-github"></i>GitHub</a>
+            <a class="perfil-social-btn" href="mailto:pedro@email.com"><i class="ti ti-mail"></i>E-mail</a>
+          </div>
+        </div>
+      </div>`,
+    footer: ``
+  },
+  skills: {
+    bar: 'Habilidades técnicas',
+    body: `<h3>Skills</h3>
+      <div style="margin-bottom:10px;">
+        <div style="font-size:11px;font-weight:800;color:#4a6a38;margin-bottom:6px;">UI/UX Design</div>
+        <div class="modal-tags"><span class="modal-tag">UX Research</span><span class="modal-tag">Benchmarking</span><span class="modal-tag">Prototipação</span><span class="modal-tag">Design Systems</span></div>
+      </div>
+      <div style="margin-bottom:10px;">
+        <div style="font-size:11px;font-weight:800;color:#4a6a38;margin-bottom:6px;">Dev</div>
+        <div class="modal-tags"><span class="modal-tag">HTML/CSS</span><span class="modal-tag">JavaScript</span><span class="modal-tag">TypeScript</span><span class="modal-tag">React</span></div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:800;color:#4a6a38;margin-bottom:6px;">Ferramentas</div>
+        <div class="modal-tags"><span class="modal-tag">Figma</span><span class="modal-tag">Scrum</span><span class="modal-tag">Trello</span><span class="modal-tag">Double Diamond</span></div>
+      </div>`,
+    footer: ``
+  },
+  contato: {
+    bar: 'Contato',
+    body: `<h3>Vamos criar algo incrível?</h3>
+      <p>Estou em constante aprendizado e aberto a conversar sobre novos desafios, parcerias e projetos in UI/UX Design.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#4a5a40;">
+          <i class="ti ti-brand-linkedin" style="font-size:16px;color:#2d7d46;" aria-hidden="true"></i>
+          <span>pedro-sampaio-463a77375</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#4a5a40;">
+          <i class="ti ti-brand-github" style="font-size:16px;color:#2d7d46;" aria-hidden="true"></i>
+          <span>github.com/PedroSmp</span>
+        </div>
+      </div>`,
+    footer: `<a class="modal-btn primary" href="https://www.linkedin.com/in/pedro-sampaio-463a77375" target="_blank"><i class="ti ti-brand-linkedin" aria-hidden="true"></i>LinkedIn</a>
+      <a class="modal-btn secondary" href="https://github.com/PedroSmp" target="_blank"><i class="ti ti-brand-github" aria-hidden="true"></i>GitHub</a>`
+  },
+  curriculo: {
+    bar: 'Currículo — UX Designer',
+    body: `<h3>Currículo UX</h3>
+      <p>Baixe meu currículo updated com experiências acadêmicas, habilidades técnicas e projetos em UI/UX Design.</p>
+      <div style="background:#e8eedc;border-radius:8px;padding:12px;border:1px solid #c0d0a0;margin-top:8px;">
+        <div style="font-size:12px;font-weight:700;color:#4a6a38;">currículo- UX .pdf</div>
+        <div style="font-size:11px;color:#7a8c70;margin-top:2px;">Documento PDF · PT/BR</div>
+      </div>`,
+    footer: `<a class="modal-btn primary" href="https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/currículo- UX .pdf" download target="_blank"><i class="ti ti-download" aria-hidden="true"></i>Baixar PDF</a>`
+  }
 };
 
-/* -----------------------------------------------------------
-   2. NAVEGAÇÃO E MENU
------------------------------------------------------------ */
-document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('nav a[href^="#"], .nav-mobile-menu a[href^="#"]');
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const target = document.getElementById(this.getAttribute('href').substring(1));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth' });
-                closeMenu();
-            }
-        });
-    });
+function openModal(id) {
+  const d = data[id]; if(!d) return;
+
+  document.getElementById('win-titlebar-name').textContent = d.bar;
+  document.getElementById('modal-body').innerHTML = d.body;
+  document.getElementById('modal-footer').innerHTML = d.footer;
+
+  // INICIANDO O CARROSSEL SE HOUVER IMAGENS
+  if (d.images && d.images.length > 0) {
+    currentImages = d.images;
+    currentIndex = 0;
+    updateCarousel();
+  }
+
+  // AJUSTE DE PADDING DO MODAL
+  const modalBody = document.getElementById('modal-body');
+  if(modalBody.querySelector('.perfil-wrap')) {
+    modalBody.style.padding = '0';
+  } else {
+    modalBody.style.padding = ''; 
+  }
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if(!e || e.target.id==='modal-overlay' || e.target.closest('.win-btn-close') || e.target.closest('.win-btn')) {
+    document.getElementById('modal-overlay').classList.remove('open');
+  }
+}
+
+
+/* ── FUNÇÕES DO CARROSSEL ── */
+function updateCarousel() {
+  const imgElement = document.getElementById('carousel-img');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const arrowLeft = document.querySelector('.carousel-arrow.left');
+  const arrowRight = document.querySelector('.carousel-arrow.right');
+
+  if (!imgElement || !dotsContainer) return;
+
+  // 1. Aplica a animação removendo e adicionando a classe rapidamente
+  imgElement.classList.remove('fade-anim');
+  void imgElement.offsetWidth; // Pequeno truque do JS para forçar o navegador a reiniciar a animação
+  imgElement.classList.add('fade-anim');
+
+  // 2. Troca o endereço da imagem
+  imgElement.src = currentImages[currentIndex];
+
+  if (currentImages.length <= 1) {
+    if(arrowLeft) arrowLeft.style.display = 'none';
+    if(arrowRight) arrowRight.style.display = 'none';
+    dotsContainer.style.display = 'none';
+    return;
+  }
+
+  if(arrowLeft) arrowLeft.style.display = 'block';
+  if(arrowRight) arrowRight.style.display = 'block';
+  dotsContainer.style.display = 'flex';
+
+  // Desenha as bolinhas (dots) dinamicamente
+  dotsContainer.innerHTML = '';
+  currentImages.forEach((_, index) => {
+    const dot = document.createElement('span');
+    if (index === currentIndex) dot.classList.add('active');
+    
+    dot.style.cursor = 'pointer';
+    dot.onclick = (e) => {
+      e.stopPropagation();
+      currentIndex = index;
+      updateCarousel();
+    };
+    dotsContainer.appendChild(dot);
+  });
+}
+
+// Volta 1 imagem
+function prevImage(e) {
+  if(e) e.stopPropagation();
+  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+  updateCarousel();
+}
+
+// Avança 1 imagem
+function nextImage(e) {
+  if(e) e.stopPropagation();
+  currentIndex = (currentIndex + 1) % currentImages.length;
+  updateCarousel();
+}
+/* ────────────────────────── */
+
+function tick() {
+  const now = new Date();
+  const timeStr = now.getHours().toString().padStart(2,'0')+':'+now.getMinutes().toString().padStart(2,'0');
+  const dateStr = now.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
+  document.getElementById('clock-time').textContent = timeStr;
+  document.getElementById('clock-date').textContent = dateStr;
+}
+tick();
+setInterval(tick, 10000);
+
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') {
+    document.getElementById('modal-overlay').classList.remove('open');
+  }
 });
-
-function toggleMenu() {
-    document.getElementById('mobile-menu').classList.toggle('open');
-    document.getElementById('hamburger').classList.toggle('open');
-}
-
-function closeMenu() {
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-}
-
-/* -----------------------------------------------------------
-   3. MODAL DE PROJETOS
------------------------------------------------------------ */
-/* -----------------------------------------------------------
-   3. MODAL DE PROJETOS (VERSÃO À PROVA DE BALAS)
------------------------------------------------------------ */
-function openProject(id) {
-    const p = projects[id];
-    if (!p) return;
-
-    const lang = currentLang || 'pt';
-    const langData = p[lang] || p;
-
-    // Elementos do Modal (O JS vai procurar esses IDs no HTML)
-    const track = document.getElementById('proj-modal-carousel');
-    const indicators = document.getElementById('carousel-indicators');
-    const titleEl = document.getElementById('proj-modal-title');
-    const descEl = document.getElementById('proj-modal-desc');
-    const roleEl = document.getElementById('proj-modal-role');
-    const situationEl = document.getElementById('proj-modal-situation');
-    const notionBtn = document.getElementById('proj-modal-notion');
-    const btnLink = document.getElementById('proj-modal-link');
-
-    // --- 1. PREENCHER TEXTOS (COM VERIFICAÇÃO) ---
-    if (titleEl) titleEl.textContent = p.title;
-    if (descEl) descEl.textContent = langData.desc || "Descrição não disponível.";
-    if (roleEl) roleEl.textContent = langData.role;
-    if (situationEl) situationEl.textContent = langData.situation || "Status não informado";
-
-    // --- 2. CARREGAR CARROSSEL ---
-    if (track && indicators) {
-        track.innerHTML = '';
-        indicators.innerHTML = '';
-        if (p.images && Array.isArray(p.images)) {
-            p.images.forEach((src, idx) => {
-                const imgContainer = document.createElement('div');
-                imgContainer.className = 'carousel-item-wrapper';
-                const img = document.createElement('img');
-                img.src = src;
-                imgContainer.appendChild(img);
-                track.appendChild(imgContainer);
-                
-                const dot = document.createElement('div');
-                dot.className = `dot ${idx === 0 ? 'active' : ''}`;
-                indicators.appendChild(dot);
-            });
-        }
-    }
-
-    // --- 3. LÓGICA DO BOTÃO DO NOTION ---
-    if (notionBtn) {
-        if (p.notionLink) {
-            notionBtn.href = p.notionLink;
-            notionBtn.style.display = 'flex';
-            
-            // Verifica se o botão tem um <span> dentro antes de tentar mudar
-            const spanInside = notionBtn.querySelector('span');
-            if (spanInside) {
-                spanInside.textContent = lang === 'pt' ? 'Ver no Notion' : 'View on Notion';
-            } else {
-                notionBtn.textContent = lang === 'pt' ? 'Ver no Notion' : 'View on Notion';
-            }
-        } else {
-            notionBtn.style.display = 'none';
-        }
-    }
-
-    // --- 4. LÓGICA DO BOTÃO PRINCIPAL ---
-    if (btnLink) {
-        btnLink.href = p.link;
-        btnLink.textContent = langData.linkText || (lang === 'pt' ? 'Ver Projeto ↗' : 'View Project ↗');
-        
-        if (p.link.includes('github.com')) {
-            btnLink.style.backgroundColor = '#24292e'; // Preto GitHub
-        } else if (p.link.includes('figma.com')) {
-            btnLink.style.backgroundColor = '#F24E1E'; // Laranja Figma
-        } else {
-            btnLink.style.backgroundColor = 'var(--blue)'; // Azul Padrão
-        }
-    }
-
-    // --- 5. TAGS E TECNOLOGIAS ---
-    const tagsEl = document.getElementById('proj-modal-tags');
-    const techsEl = document.getElementById('proj-modal-techs');
-    if (tagsEl && p.tags) {
-        tagsEl.innerHTML = p.tags.map(t => `<span class="project-tag ${t.cls}">${t.label}</span>`).join('');
-    }
-    if (techsEl && p.techs) {
-        techsEl.innerHTML = p.techs.map(t => `<span class="proj-modal-tech">${t}</span>`).join('');
-    }
-
-    // --- 6. EXIBIR MODAL ---
-    if (track) track.scrollLeft = 0;
-    const overlay = document.getElementById('proj-overlay');
-    if (overlay) overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeProjModal(e) {
-    // Fecha apenas se clicar no fundo (overlay) ou se a função for chamada diretamente
-    if (!e || e.target.id === 'proj-overlay') {
-        document.getElementById('proj-overlay').classList.remove('open');
-        document.body.style.overflow = '';
-    }
-}
-
-/* -----------------------------------------------------------
-   4. CARROSSEL (LOGICA DE MOVIMENTO)
------------------------------------------------------------ */
-function moveCarousel(direction) {
-    const track = document.getElementById('proj-modal-carousel');
-    track.scrollLeft += (direction * track.offsetWidth);
-    setTimeout(updateDots, 300);
-}
-
-function updateDots() {
-    const track = document.getElementById('proj-modal-carousel');
-    const index = Math.round(track.scrollLeft / track.offsetWidth);
-    document.querySelectorAll('.dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-    });
-}
-
-/* -----------------------------------------------------------
-   5. IDIOMA (SISTEMA DE TRADUÇÃO)
------------------------------------------------------------ */
-let currentLang = 'pt';
-function toggleLang() {
-    currentLang = currentLang === 'pt' ? 'en' : 'pt';
-    const label = document.getElementById('lang-label');
-    const flag = document.querySelector('.lang-flag');
-    
-    flag.textContent = currentLang === 'en' ? '🇧🇷' : '🇺🇸';
-    label.textContent = currentLang === 'en' ? 'PT' : 'EN';
-    
-    document.querySelectorAll('[data-pt]').forEach(el => {
-        const text = el.getAttribute(`data-${currentLang}`);
-        if (text) el.innerHTML = text;
-    });
-}
