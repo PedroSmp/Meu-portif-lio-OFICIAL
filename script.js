@@ -7,7 +7,6 @@ const data = {
     bar: 'Bem Lar — UI/UX Project',
     // 1. TODAS AS SUAS NOVAS IMAGENS ENTRARAM AQUI NA LISTA:
     images: [
-      './fotos/capa_bemlar.png',
       './fotos/Agenda.png',
       './fotos/DASHBOARD.png',
       './fotos/FINANÇAS.png',
@@ -28,7 +27,7 @@ const data = {
 
           <div class="project-info">
             <h2>Bem Lar</h2>
-            <p>Plataforma mobile para conectar profissionais de limpeza doméstica a clientes, com foco em valorização profissional, impacto social e acessibilidade.</p>
+            <p>Plataforma pensada em conectar profissionais de limpeza doméstica a clientes, com foco em valorização profissional, impacto social e acessibilidade.</p>
             <div class="project-tags-grid">
               <span class="tag-new">UI/UX</span>
               <span class="tag-new">Figma</span>
@@ -40,7 +39,7 @@ const data = {
 
         <div class="project-bottom-row">
           <div class="project-role-desc">
-            Idealizei o projeto a partir de uma vivência pessoal, sendo responsável por conduzir o UX Research, benchmarking comparativo, mapeamento de fluxos e prototipação de alta fidelidade.
+            A bem lar surgiu através do meu convivio com pessoas que são domésticas, percebi que essa pessoas não possuem uma ferramenta que possa ajuda-las, foi então que criei a bem lar, uma plataforma que conecta profissionais de limpeza doméstica a clientes, com foco em valorização profissional, impacto social e acessibilidade. Minha atuação foi no desenvolvimento e construção de toda a interface do aplicativo, desde a concepção dos protótipos no Figma até a implementação completa mais também, pesquisas de UX Research utilizando ferramentas de IA para auxiliar na criação de personas, jornadas do usuário e testes de usabilidade e assim entregar um produto final que atenda as necessidades do usuário e do cliente.
           </div>
           <div class="project-actions">
             <a href="https://www.figma.com/design/msJsyd6SJ5BCiLVwOArvRh" target="_blank" class="btn-custom btn-figma-orange">Figma</a>
@@ -52,7 +51,7 @@ const data = {
     footer: ``
   },
   agrirs: {
-    bar: 'AgriRs — Front-end + Scrum',
+    bar: 'Projeto entregue com sucesso !',
     images: [
       './fotos/AgriRs.png'
     ],
@@ -68,11 +67,12 @@ const data = {
 
           <div class="project-info">
             <h2>AgriRs</h2>
-            <p>Portal institucional desenvolvido para o laboratório agrícola do INPE, integrando uma experiência visual moderna à organization de metodologias ágeis.</p>
+            <p>Portal institucional desenvolvido para o laboratório ade Sensoriamento Remoto do INPE, integrando uma experiência visual moderna à organization de metodologias ágeis.</p>
             <div class="project-tags-grid">
-              <span class="tag-new">UI Design</span>
+              <span class="tag-new">UI/UX Design</span>
               <span class="tag-new">HTML/CSS/JS</span>
               <span class="tag-new">Scrum Master</span>
+              <span class="tag-new">Metodolia Àgil</span>
               <span class="tag-new">Git</span>
             </div>
           </div>
@@ -80,10 +80,51 @@ const data = {
 
         <div class="project-bottom-row">
           <div class="project-role-desc">
-            Atuei na liderança dos processos como Scrum Master e no desenvolvimento do UI Design, cobrindo desde a concepção dos protótipos no Figma até a implementação completa do front-end.
+            Esse foi o meu primeiro projeto durante o curso de Desenvolvimento de Software Multiplaforna na FATEC, onde eu atuei como Scrum Master, UI/UX Designer e desenvolvedor front-end. O projeto consistiu em criar um portal institucional para o laboratório de Sensoriamento Remoto do INPE, utilizando metodologias ágeis e ferramentas de versionamento de código como GitHub. O resultado final foi um portal moderno, funcional e responsivo, que atende às necessidades do laboratório e proporciona uma experiência agradável aos usuários, terminando com o cliente satisfeito e escolhendo o projeto para ser publicado no site oficial do INPE.
           </div>
           <div class="project-actions">
             <a href="https://github.com/404NotFound-ABP/AgriRSLAB_Portal.git" target="_blank" class="btn-custom" style="background:#24292e; color:white;">GitHub</a>
+          </div>
+        </div>
+      </div>
+    `,
+    footer: ``
+  },
+  Autoatendimento: {
+    bar: 'Projeto entregue com sucesso !',
+    images: [
+      './fotos/double_diamond.jpg',
+      './fotos/persona_aluramed.jpg'
+    ],
+    body: `
+      <div class="project-container">
+        <div class="project-top-grid">
+          <div class="project-carousel">
+            <button class="carousel-arrow left" onclick="prevImage(event)">‹</button>
+            <img id="carousel-img" src="./fotos/double_diamond.jpg" alt="Persona AluraMed" onerror="this.style.opacity='0.5';">
+            <button class="carousel-arrow right" onclick="nextImage(event)">›</button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+          </div>
+
+          <div class="project-info">
+            <h2>AluraMed</h2>
+            <p> Chatboot academico da FATEC Jacareí </p>
+            <div class="project-tags-grid">
+              <span class="tag-new">UX Research</span>
+              <span class="tag-new">Figma</span>
+              <span class="tag-new">UI Design</span>
+              <span class="tag-new">IA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-bottom-row">
+          <div class="project-role-desc">
+            Este é o segundo projeto que realizei durante o curso de Desenvolvimento de Software Multiplataforma na FATEC, onde atuei como UX Researcher e UI Designer. O projeto consistiu em criar um chatbot acadêmico para a FATEC Jacareí, utilizando metodologias de UX Research e ferramentas de design como Figma. Realizei pesquisas de mercado (Benchmarking) para entender suas necessidades e expectativas em relação ao chatbot, e com base nos resultados, desenvolvi protótipos de alta fidelidade com o auxílio de Inteligencia artificial que foram testados e refinados até chegarmos a uma solução final que atende às necessidades dos usuários e proporciona uma experiência agradável e intuitiva, e pela segunda vez o projeto foi escolhido pelo cliente.
+          </div>
+          <div class="project-actions">
+            <a href="https://www.figma.com/design/nxX4kUKGSKeNLARNj0iMDf/ChatBoot--Fatec?node-id=294-813&t=ta6jcEsL02Dcuyc8-1" target="_blank" class="btn-custom btn-figma-orange">Figma</a>
+            <a href="https://github.com/404NotFound-ABP/Autoatendimento_Academico.git" target="_blank" class="btn-custom btn-notion-gray">Github</a>
           </div>
         </div>
       </div>
@@ -108,7 +149,7 @@ const data = {
 
           <div class="project-info">
             <h2>AluraMed</h2>
-            <p>Telemedicina focada em acessibilidade e jornada do paciente.</p>
+            <p>Aplicativo de agendamento de consultas médicas.</p>
             <div class="project-tags-grid">
               <span class="tag-new">UX Research</span>
               <span class="tag-new">Figma</span>
@@ -120,7 +161,7 @@ const data = {
 
         <div class="project-bottom-row">
           <div class="project-role-desc">
-            Conduzi benchmarking comparativo e mapeamento detalhado da jornada do usuário para mitigar pontos de fricção e reduzir o atrito no fluxo de agendamentos.
+            Atuei como UX Researcher e UI Designer no projeto AluraMed, um aplicativo de agendamento de consultas médicas. Realizei pesquisas de UX Research utilizando ferramentas de IA para auxiliar na criação de personas, jornadas do usuário e testes de usabilidade. Com base nos resultados das pesquisas, desenvolvi protótipos de alta fidelidade no Figma, aplicando princípios de design centrado no usuário e garantindo uma experiência intuitiva e agradável para os usuários finais.
           </div>
           <div class="project-actions">
             <a href="https://www.figma.com/board/BL9qfcUznNXiTXNXN1VrHd" target="_blank" class="btn-custom btn-figma-orange">Figma</a>
