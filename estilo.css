@@ -315,7 +315,14 @@ body {
   .icon-grid { gap: 24px; }
   .icon { width: 70px; }
   .folder-svg { width: 52px; height: 42px; }
-  .modal { max-width: 100%; min-height: 100vh; width: 100%; border-bottom: none; }
+  .modal { 
+    max-width: 100%; 
+    width: 100%; 
+    min-height: auto; /* O SEGREDO: Remove os 100vh que estavam quebrando o topo */
+    max-height: 92vh; /* Limita a altura para deixar um respiro no topo da tela */
+    border-radius: 12px 12px 0 0; /* Arredonda as pontas de cima */
+    border-bottom: none; 
+  }
   .modal-body { padding: 20px; }
   .modal-overlay { padding: 0; align-items: flex-end; }
   .project-role-desc { padding: 16px 20px; }
@@ -360,6 +367,14 @@ body {
   .win-titlebar { padding: 10px 8px 10px 14px; }
   .win-titlebar-name { font-size: 13.5px; }
   .win-btn { width: 30px; height: 26px; }
+  .modal { 
+    max-width: 100%; 
+    width: 100%; 
+    min-height: auto; /* Garante que o erro não volte nos celulares menores */
+    max-height: 90vh; /* Deixa 10% da tela de respiro no topo para ver o papel de parede */
+    border-radius: 15px 15px 0 0; 
+    border-bottom: none; 
+  }
   .modal-body { padding: 16px; }
   .modal-body h3 { font-size: 15px; }
   .modal-body p { font-size: 12.5px; }
