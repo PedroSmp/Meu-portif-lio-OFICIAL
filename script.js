@@ -269,11 +269,13 @@ function openModal(id) {
   }
 
   document.getElementById('modal-overlay').classList.add('open');
+  document.body.classList.add('modal-aberto'); // trava o scroll do body (essencial no mobile)
 }
 
 function closeModal(e) {
   if(!e || e.target.id==='modal-overlay' || e.target.closest('.win-btn-close') || e.target.closest('.win-btn')) {
     document.getElementById('modal-overlay').classList.remove('open');
+    document.body.classList.remove('modal-aberto'); // libera o scroll do body de novo
   }
 }
 

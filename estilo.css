@@ -9,6 +9,15 @@ html, body {
   overflow: hidden;
 }
 
+/* Trava de verdade o scroll do body no mobile quando o modal está aberto
+   (overflow:hidden sozinho não bloqueia scroll por toque em Chrome/Safari mobile) */
+body.modal-aberto {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
 }
@@ -125,6 +134,8 @@ body {
   max-height: 90vh; overflow-y: auto; overflow-x: hidden;
   box-shadow: 0 12px 40px rgba(30, 46, 30, 0.25);
   display: flex; flex-direction: column; 
+  -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
+  overscroll-behavior: contain; /* impede que o scroll "vaze" pra página por trás */
 }
 
 .modal-body {
