@@ -58,7 +58,7 @@ const data = {
               <div class="case-block-icon">🎯</div>
               <div class="case-block-text">
                 <div class="case-block-label">O que é</div>
-                <div class="case-block-desc">Aplicativo mobile focado no ecossistema de serviços domésticos — conectando profissionais de limpeza a contratantes de forma segura e prática.</div>
+                <div class="case-block-desc">Plataforma criada para auxiliar e ajudar diariamente profissionais diaristas, com foco em cuidado e profissionalismo.</div>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ const data = {
               <div class="case-block-icon">👤</div>
               <div class="case-block-text">
                 <div class="case-block-label">Meu papel</div>
-                <div class="case-block-desc">UX Researcher e UI Designer — desde a pesquisa até os protótipos de alta fidelidade e testes de usabilidade.</div>
+                <div class="case-block-desc">UX Researcher e UI Designer, desde a pesquisa até os protótipos de alta fidelidade e testes de usabilidade e a implementação front-end da plataforma.</div>
               </div>
             </div>
 
@@ -90,7 +90,7 @@ const data = {
               <div class="case-block-icon">✨</div>
               <div class="case-block-text">
                 <div class="case-block-label">Destaques de UI</div>
-                <div class="case-block-desc">Fluxo de agendamento simplificado e interface focada em acessibilidade e confiança visual — reduzindo atrito para os dois lados da plataforma.</div>
+                <div class="case-block-desc">Fluxo de agendamento simplificado e interface focada em acessibilidade e confiança visual, reduzindo atrito para os dois lados da plataforma.</div>
               </div>
             </div>
 
@@ -105,7 +105,9 @@ const data = {
   agrirs: {
     bar: 'AgriRs — UI/UX Project',
     images: [
-      './fotos/AgriRs.png'
+      './fotos/AgriRs_pgI.png',
+      './fotos/AgriRs_Dest.png',
+      './fotos/AgriRs_footer.png',
     ],
     body: `
       <div class="case-layout">
@@ -113,7 +115,7 @@ const data = {
         <div class="case-carousel-wrap">
           <div class="project-carousel">
             <button class="carousel-arrow left" onclick="prevImage(event)">‹</button>
-            <img id="carousel-img" src="./fotos/AgriRs.png" alt="Interface AgriRs" onerror="this.style.opacity='0.3';">
+            <img id="carousel-img" src="./fotos/AgriRs.png" alt="Interface AgriRs";">
             <button class="carousel-arrow right" onclick="nextImage(event)">›</button>
             <div class="carousel-dots" id="carousel-dots"></div>
           </div>
@@ -149,7 +151,7 @@ const data = {
               <div class="case-block-icon">🎯</div>
               <div class="case-block-text">
                 <div class="case-block-label">O que é</div>
-                <div class="case-block-desc">Portal institucional moderno para o laboratório de Sensoriamento Remoto do INPE, integrando experiência visual contemporânea e organização por metodologias ágeis.</div>
+                <div class="case-block-desc">Meu primeiro projeto acadêmico realizado durante o curso de Desenvolvimento de Software Multiplataforma na FATEC</div>
               </div>
             </div>
 
@@ -165,7 +167,7 @@ const data = {
               <div class="case-block-icon">👤</div>
               <div class="case-block-text">
                 <div class="case-block-label">Meu papel</div>
-                <div class="case-block-desc">Scrum Master, UI/UX Designer e desenvolvedor front-end — atuei em todas as frentes do projeto, da pesquisa ao código.</div>
+                <div class="case-block-desc">Scrum Master, UI/UX Designer e desenvolvedor front-end, atuei em todas as frentes do projeto, da pesquisa ao código.</div>
               </div>
             </div>
 
@@ -173,7 +175,7 @@ const data = {
               <div class="case-block-icon">✨</div>
               <div class="case-block-text">
                 <div class="case-block-label">Resultado</div>
-                <div class="case-block-desc">Projeto escolhido pelo cliente para publicação no site oficial do INPE — portal responsivo, funcional e aprovado pelos pesquisadores do laboratório.</div>
+                <div class="case-block-desc">Projeto escolhido pelo cliente para publicação no site oficial do INPE portal responsivo, funcional e aprovado pelos pesquisadores do laboratório.</div>
               </div>
             </div>
 
@@ -244,7 +246,7 @@ const data = {
               <div class="case-block-icon">⚡</div>
               <div class="case-block-text">
                 <div class="case-block-label">O Desafio</div>
-                <div class="case-block-desc">Simplificar o processo de agendamento médico reduzindo barreiras de acesso — tornando a plataforma intuitiva para usuários com diferentes níveis de familiaridade digital.</div>
+                <div class="case-block-desc">Simplificar o processo de agendamento médico reduzindo barreiras de acesso, tornando a plataforma intuitiva para usuários com diferentes níveis de familiaridade digital.</div>
               </div>
             </div>
 
@@ -252,7 +254,7 @@ const data = {
               <div class="case-block-icon">👤</div>
               <div class="case-block-text">
                 <div class="case-block-label">Meu papel</div>
-                <div class="case-block-desc">UX Researcher e UI Designer — condução das pesquisas, prototipação de alta fidelidade e refinamento baseado em testes de usabilidade.</div>
+                <div class="case-block-desc">UX Researcher e UI Designer, condução das pesquisas, prototipação de alta fidelidade e refinamento baseado em testes de usabilidade.</div>
               </div>
             </div>
 
@@ -282,7 +284,12 @@ const data = {
   Autoatendimento: {
     bar: 'Faqtec — UI/UX Project',
     images: [
-      './fotos/double_diamond.png'
+      './fotos/faq.jpg',
+      './fotos/faqtec.jpg',
+      './fotos/logo-chat.svg',
+      './fotos/PERGUNTAS.svg',
+      './fotos/RELATORIOS.svg',
+      './fotos/CRIANDO UMA PERGUNTA.svg',
     ],
     body: `
       <div class="case-layout">
@@ -290,7 +297,7 @@ const data = {
         <div class="case-carousel-wrap">
           <div class="project-carousel">
             <button class="carousel-arrow left" onclick="prevImage(event)">‹</button>
-            <img id="carousel-img" src="./fotos/double_diamond.png" alt="Faqtec" onerror="this.style.opacity='0.3';">
+            <img id="carousel-img">
             <button class="carousel-arrow right" onclick="nextImage(event)">›</button>
             <div class="carousel-dots" id="carousel-dots"></div>
           </div>
@@ -330,7 +337,7 @@ const data = {
               <div class="case-block-icon">🎯</div>
               <div class="case-block-text">
                 <div class="case-block-label">O que é</div>
-                <div class="case-block-desc">Chatbot acadêmico desenvolvido para a FATEC Jacareí — solução de autoatendimento inteligente para responder dúvidas de alunos de forma rápida e acessível.</div>
+                <div class="case-block-desc">Meu segundo projeto acadêmico desenvolvido para a FATEC Jacareíum chatbot acadêmico, uma solução de autoatendimento inteligente para responder dúvidas de alunos de forma rápida e acessível.</div>
               </div>
             </div>
 
@@ -346,7 +353,7 @@ const data = {
               <div class="case-block-icon">👤</div>
               <div class="case-block-text">
                 <div class="case-block-label">Meu papel</div>
-                <div class="case-block-desc">UX Researcher e UI Designer — pesquisa de mercado, benchmarking, criação de protótipos de alta fidelidade e validação com usuários.</div>
+                <div class="case-block-desc">UX Researcher e UI Designer, pesquisa de mercado, benchmarking, criação de protótipos de alta fidelidade e validação com usuários.</div>
               </div>
             </div>
 
@@ -354,7 +361,7 @@ const data = {
               <div class="case-block-icon">✨</div>
               <div class="case-block-text">
                 <div class="case-block-label">Resultado</div>
-                <div class="case-block-desc">Projeto escolhido pelo cliente pela segunda vez consecutiva — solução aprovada e com protótipo validado em testes de usabilidade com alunos reais.</div>
+                <div class="case-block-desc">Projeto escolhido pelo cliente pela segunda vez consecutiva e com a solução aprovada e com protótipo validado em testes de usabilidade com alunos reais.</div>
               </div>
             </div>
 
