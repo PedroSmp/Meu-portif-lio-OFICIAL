@@ -141,7 +141,7 @@ body {
 .modal-body {
   padding: 32px 36px; flex: 1; display: flex; flex-direction: column;
 }
-.modal-body:has(.perfil-wrap) { padding: 0; overflow: hidden; border-radius: 0; }
+.modal-body.no-padding { padding: 0; overflow: hidden; border-radius: 0; }
 .modal-body h3 { font-size: 19px; font-weight: 800; color: #1b2e1a; margin-bottom: 8px; }
 .modal-body p { font-size: 14.5px; color: #4a5a40; line-height: 1.65; margin-bottom: 14px; }
 
@@ -185,20 +185,20 @@ body {
 /* ==========================================================================
    5. COMPONENTES INTERNOS (Perfil, Tags, Botões)
    ========================================================================== */
-.perfil-wrap { display: flex; gap: 0; min-height: 240px; }
-.perfil-foto-col { width: 190px;
-    min-width: 190px;
+.perfil-wrap { display: flex; gap: 0; min-height: 240px; padding: 12px; }
+.perfil-foto-col { width: 170px; /* Diminuí o tamanho da foto */
+    min-width: 170px; /* Diminuí o tamanho da foto */
     background: #c8a830; 
     display: flex; 
     align-items: stretch; 
     overflow: hidden; 
-    margin: 10px;
+    border-radius: 8px; /* Adicionei bordas arredondadas */
   }
 .perfil-foto { width: 100%; height: 100%; }
 .perfil-foto img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 .perfil-foto-placeholder { width: 100%; height: 100%; min-height: 240px; display: flex; align-items: center; justify-content: center; background: #c8a830; }
 .perfil-foto-placeholder i { font-size: 64px; color: rgba(255, 255, 255, 0.65); }
-.perfil-info-col { flex: 1; padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 10px; background: #f4f5ec; }
+.perfil-info-col { flex: 1; padding: 10px 12px 8px 24px; display: flex; flex-direction: column; gap: 10px; background: #f4f5ec; }
 .perfil-nome-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .perfil-nome { font-size: 22px; font-weight: 900; color: #1b2e1a; line-height: 1.1; }
 .perfil-email { font-size: 13px; font-weight: 600; color: #6a8060; margin-top: -4px; }
@@ -225,11 +225,6 @@ body {
 .modal-btn.primary { background: #2d7d46; color: white; border-color: #1e5c32; }
 .modal-btn.secondary { background: transparent; color: #2d5a20; border-color: #a0b880; }
 
-.btn-custom { padding: 12px 24px; font-weight: 800; font-size: 15px; border: none; }
-.btn-custom:hover { opacity: 0.9; transform: translateY(-1px); }
-.btn-figma-orange { background: #ff6a00; color: white; }
-.btn-notion-gray { background: #d9d9d9; color: #1b2e1a; }
-
 .modal-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
 .modal-tag, .tag-new {
   padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 700;
@@ -237,75 +232,6 @@ body {
 }
 .modal-tag.dark { background: #1b2e4b; color: #a0c8d0; border-color: #2a4060; }
 .tag-new { background: #e1f0da; border: 1.5px solid #4fae5e; color: #1b2e1a; padding: 5px 12px; border-radius: 8px; font-size: 13px; }
-
-/* ==========================================================================
-   6. LAYOUT DE PROJETOS (GRID, CARROSSEL, DESCRIÇÃO)
-   ========================================================================== */
-.project-container { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 32px; 
-  flex: 1; 
-  min-height: 650px; /* MÁGICA 2: Garante que só os cases do Figma fiquem gigantes */
-}
-.project-top-grid { display: grid; grid-template-columns: 650px 1fr; gap: 24px; }
-
-.project-carousel {
-  position: relative; background: #fbf8ef; border: 1.5px solid #cbd2c0; border-radius: 12px;
-  display: flex; align-items: center; justify-content: center; height: 400px; overflow: hidden;
-}
-
-/* Ajuste para não cortar imagens mobile e manter a nitidez */
-.project-carousel img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: contain; /* MÁGICA: Mudou de 'cover' para 'contain'. Agora a imagem cabe inteira! */
-  border-radius: 6px; 
-  display: block;
-}
-
-/* Criando a animação de transição (Fade In) */
-@keyframes fadeInSlide {
-  from { 
-    opacity: 0.3; 
-    transform: scale(0.98); /* Dá um leve efeitinho de zoom out/in */
-  }
-  to { 
-    opacity: 1; 
-    transform: scale(1);
-  }
-}
-
-.fade-anim {
-  animation: fadeInSlide 0.35s ease-in-out;
-}
-
-.carousel-arrow {
-  position: absolute; top: 50%; transform: translateY(-50%); background: transparent;
-  border: none; font-size: 28px; color: #2d7d46; cursor: pointer; font-weight: 800; user-select: none;
-}
-.carousel-arrow.left { left: 6px; }
-.carousel-arrow.right { right: 6px; }
-
-.carousel-dots {
-  position: absolute; bottom: 10px; background: #246030; padding: 4px 10px;
-  border-radius: 20px; display: flex; gap: 6px;
-}
-.carousel-dots span {
-  width: 7px; height: 7px; background: white; border-radius: 50%; display: inline-block; opacity: 0.4;
-}
-.carousel-dots span.active { opacity: 1; }
-
-.project-info h2 { font-size: 24px; font-weight: 900; color: #1b2e1a; margin-bottom: 8px; }
-.project-info p { font-size: 14.5px; color: #2c3827; margin-bottom: 16px; line-height: 1.45; }
-.project-tags-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.project-bottom-row { display: flex; gap: 24px; align-items: stretch; flex: 1; }
-.project-role-desc {
-  flex: 1; padding: 28px 32px; font-size: 15.5px; line-height: 1.6;
-  background: #e1f0da; border-radius: 10px; color: #1b2e1a; display: flex; align-items: center; 
-}
-.project-actions { display: flex; gap: 12px; align-self: flex-end; }
 
 /* ==========================================================================
    7. RESPONSIVIDADE
@@ -335,13 +261,7 @@ body {
     border-bottom: none; 
   }
   .modal-body { padding: 20px; }
-  .modal-overlay { padding: 0; align-items: flex-end; }
-  .project-role-desc { padding: 16px 20px; }
-  .project-bottom-row { flex-direction: column; align-items: stretch; }
-  .project-actions { width: 100%; align-self: center; }
-  .btn-custom { flex: 1; }
-  .project-top-grid { grid-template-columns: 1fr; gap: 16px; }
-  .project-carousel { height: 280px; }
+  .modal-overlay { padding: 0; align-items: flex-end; }  
 }
 
 /* Celulares */
@@ -354,8 +274,7 @@ body {
   .icon-label { font-size: 10px; }
 
   /* Ajuste do Perfil */
-  .perfil-wrap { flex-direction: column; }
-  .perfil-foto-col { width: 100%; min-width: unset; height: 200px; }
+  .perfil-wrap { flex-direction: column; align-items: center; }
   .perfil-foto img { height: 200px; }
   .perfil-foto-placeholder { min-height: 200px; }
   .perfil-nome { font-size: 19px; }
@@ -390,9 +309,6 @@ body {
   .modal-body h3 { font-size: 15px; }
   .modal-body p { font-size: 12.5px; }
   .modal-btn { justify-content: center; width: 100%; }
-  
-  .project-top-grid { gap: 14px; }
-  .project-bottom-row { gap: 12px; }
 }
 
 /* Telas muito pequenas */
@@ -417,13 +333,30 @@ body {
   border-bottom: 1.5px solid #d0daba;
 }
 
+/* O carrossel é usado dentro do novo layout, então seus estilos foram movidos para cá */
+.project-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  overflow: hidden;
+}
+
+.project-carousel img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain;
+  border-radius: 6px; 
+  display: block;
+}
+
 .case-carousel-wrap .project-carousel {
   height: 340px;
   border-radius: 0;
   border: none;
   background: #f0f4e8;
 }
-
 .case-content {
   padding: 24px 28px 28px;
   display: flex;
@@ -460,9 +393,18 @@ body {
   width: fit-content;
   text-transform: uppercase;
 }
-.case-type-badge--web    { background: #dce8f8; color: #1a3a6a; border-color: #a8c4e8; }
-.case-type-badge--health { background: #fde8e8; color: #7a1a1a; border-color: #f0b8b8; }
-.case-type-badge--dark   { background: #2a2a3a; color: #c0c8e0; border-color: #4a4a60; }
+.case-type-badge--web { 
+  background: #f1c4c4; 
+  color: #7a1a1a; 
+  border-color: #7a1a1a;
+  margin-bottom: 4px;
+}
+.case-type-badge--health { 
+  background: #fde8e8; 
+  color: #7a1a1a; 
+  border-color: #f0b8b8;
+  margin-bottom: 4px;
+}
 
 .case-title {
   font-size: 22px;
@@ -573,6 +515,52 @@ body {
   line-height: 1.55;
   font-weight: 600;
 }
+/* Animação e controles do carrossel */
+@keyframes fadeInSlide {
+  from { opacity: 0.3; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fade-anim {
+  animation: fadeInSlide 0.35s ease-in-out;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(36, 96, 48, 0.7); /* Cor de fundo mais escura */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+  color: white; /* Ícone branco para contraste */
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.carousel-arrow i.ti {
+  stroke-width: 2.5; /* Aumenta a espessura da seta */
+  font-size: 22px;   /* Ajusta o tamanho do ícone */
+  line-height: 1;    /* Garante o alinhamento vertical perfeito */
+}
+.carousel-arrow:hover { background: rgba(36, 96, 48, 0.9); }
+.carousel-arrow.left { left: 12px; }
+.carousel-arrow.right { right: 12px; }
+
+.carousel-dots {
+  position: absolute; bottom: 10px; background: #246030; padding: 4px 10px;
+  border-radius: 20px; display: flex; gap: 6px;
+}
+.carousel-dots span {
+  width: 7px; height: 7px; background: white; border-radius: 50%; display: inline-block; opacity: 0.4;
+}
+.carousel-dots span.active { opacity: 1; }
+
+
 
 /* ==========================================================================
    9. RESPONSIVIDADE DO CASE STUDY
