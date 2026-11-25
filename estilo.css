@@ -9,8 +9,7 @@ html, body {
   overflow: hidden;
 }
 
-/* Trava de verdade o scroll do body no mobile quando o modal está aberto
-   (overflow:hidden sozinho não bloqueia scroll por toque em Chrome/Safari mobile) */
+/* Trava de verdade o scroll do body no mobile quando o modal está aberto */
 body.modal-aberto {
   position: fixed;
   overflow: hidden;
@@ -39,8 +38,9 @@ body {
 }
 
 .desktop-title {
-  font-size: 13px; font-weight: 900; color: #0e2806; letter-spacing: 2px;
-  text-transform: uppercase; margin-bottom: 28px; opacity: 0.7;
+  font-size: 13px; font-weight: 900; color: #fff; letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 28px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
 .icon-grid {
@@ -57,8 +57,9 @@ body {
 .icon:hover, .icon:focus { transform: translateY(-3px); outline: none; }
 
 .icon-label {
-  font-size: 11px; font-weight: 800; color: #3a4a36;
+  font-size: 12px; font-weight: 800; color: #fff;
   text-align: center; word-break: break-word;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55), 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .folder-svg { width: 60px; height: 48px; }
@@ -67,14 +68,15 @@ body {
    3. TASKBAR & RELÓGIO (DESKTOP)
    ========================================================================== */
 .taskbar {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  min-height: 60px; 
-  background: rgba(240, 245, 240, 0.55); 
-  backdrop-filter: blur(5px); 
-  -webkit-backdrop-filter: blur(12px); 
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+  width: max-content; max-width: calc(100% - 24px);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px) saturate(1.8);
+  -webkit-backdrop-filter: blur(22px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
   display: flex; align-items: center; justify-content: center;
-  flex-wrap: wrap; gap: 24px; padding: 10px 20px;
+  gap: 18px; padding: 10px 28px; z-index: 10;
 }
 
 .dock-item {
@@ -82,7 +84,7 @@ body {
   cursor: pointer; transition: transform 0.15s;
 }
 
-.dock-item:hover { transform: translateY(-8px); }
+.dock-item:hover { transform: translateY(-4px); }
 
 .dock-icon { 
   border-radius: 12px;
@@ -94,61 +96,67 @@ body {
 .dock-icon i { color: white; font-size: 26px; }
 
 .dock-label { 
-  font-size: 14px; font-weight: 800; color: #1b2e1a; 
+  font-size: 13px; font-weight: 800; color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55), 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .clock {
-  position: absolute; bottom: 18px; right: 24px;
-  font-size: 14px; font-weight: 800; color: #1b2e1a;
-  white-space: nowrap; text-align: right; line-height: 1.2;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+  position: absolute; bottom: 16px; right: 16px;
+  padding: 8px 16px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px) saturate(1.8);
+  -webkit-backdrop-filter: blur(22px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff; white-space: nowrap; text-align: center; line-height: 1.2; z-index: 10;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55), 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
-.clock-time { font-size: 18px; font-weight: 900; }
-.clock-date { font-size: 13px; font-weight: 700; opacity: 0.85; }
+.clock-time { font-size: 16px; font-weight: 900; }
+.clock-date { font-size: 11px; font-weight: 700; opacity: 0.8; }
+@media (max-width: 900px) { .clock { display: none; } }
 
 /* ==========================================================================
    4. MODAL GERAL & TITLEBAR
    ========================================================================== */
 .modal-overlay {
   display: none; position: fixed; inset: 0;
-  background: rgba(30, 46, 30, 0.45);
+  background: rgba(15, 10, 10, 0.75);
   align-items: center; justify-content: center;
   z-index: 999; padding: 16px;
 }
 
 .modal-footer {
-  padding: 16px 36px 32px; /* Adiciona respiro nas laterais e em baixo */
+  padding: 16px 36px 32px;
   display: flex;
   gap: 12px;
-  justify-content: flex-end; /* Empurra os botões para o canto direito */
-  background: #f4f5ec;
-  border-radius: 0 0 6px 6px; /* Acompanha a curva inferior da janela */
+  justify-content: flex-end;
+  background: #181414;
+  border-radius: 0 0 6px 6px;
 }
 
 .modal-overlay.open { display: flex; }
 
 .modal {
-  background: #f4f5ec; border-radius: 6px; width: 100%; max-width: 1000px; 
-  min-height: auto; /* MÁGICA 1: Agora a janela encolhe para abraçar o conteúdo */
+  background: #181414; border-radius: 6px; width: 100%; max-width: 1000px; 
+  min-height: auto; 
   max-height: 90vh; overflow-y: auto; overflow-x: hidden;
-  box-shadow: 0 12px 40px rgba(30, 46, 30, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
   display: flex; flex-direction: column; 
-  -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
-  overscroll-behavior: contain; /* impede que o scroll "vaze" pra página por trás */
+  -webkit-overflow-scrolling: touch; 
+  overscroll-behavior: contain; 
 }
 
 .modal-body {
   padding: 32px 36px; flex: 1; display: flex; flex-direction: column;
 }
 .modal-body.no-padding { padding: 0; overflow: hidden; border-radius: 0; }
-.modal-body h3 { font-size: 19px; font-weight: 800; color: #1b2e1a; margin-bottom: 8px; }
-.modal-body p { font-size: 14.5px; color: #4a5a40; line-height: 1.65; margin-bottom: 14px; }
+.modal-body h3 { font-size: 19px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+.modal-body p { font-size: 14.5px; color: #d6c6c6; line-height: 1.65; margin-bottom: 14px; }
 
 .win-titlebar {
-  background: #3a8a4a; padding: 8px 8px 8px 16px; display: flex; 
+  background: #b71c1c; padding: 8px 8px 8px 16px; display: flex; 
   align-items: center; justify-content: space-between;
-  border-bottom: 1.5px solid #2d7d46; flex-wrap: nowrap; gap: 6px;
+  border-bottom: 1.5px solid #8e0000; flex-wrap: nowrap; gap: 6px;
   position: sticky; top: 0; z-index: 2;
 }
 
@@ -167,7 +175,7 @@ body {
   cursor: pointer; transition: background 0.15s;
 }
 .win-btn:hover { background: rgba(255, 255, 255, 0.28); }
-.win-btn-close:hover { background: #e0554f; }
+.win-btn-close:hover { background: #ff4d4d; }
 
 .win-ico { width: 10px; height: 10px; position: relative; display: block; }
 .win-ico-min::before {
@@ -186,58 +194,58 @@ body {
    5. COMPONENTES INTERNOS (Perfil, Tags, Botões)
    ========================================================================== */
 .perfil-wrap { display: flex; gap: 0; min-height: 240px; padding: 12px; }
-.perfil-foto-col { width: 170px; /* Diminuí o tamanho da foto */
-    min-width: 170px; /* Diminuí o tamanho da foto */
+.perfil-foto-col { width: 170px;
+    min-width: 170px;
     background: #c8a830; 
     display: flex; 
     align-items: stretch; 
     overflow: hidden; 
-    border-radius: 8px; /* Adicionei bordas arredondadas */
+    border-radius: 8px;
   }
 .perfil-foto { width: 100%; height: 100%; }
 .perfil-foto img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 .perfil-foto-placeholder { width: 100%; height: 100%; min-height: 240px; display: flex; align-items: center; justify-content: center; background: #c8a830; }
 .perfil-foto-placeholder i { font-size: 64px; color: rgba(255, 255, 255, 0.65); }
-.perfil-info-col { flex: 1; padding: 10px 12px 8px 24px; display: flex; flex-direction: column; gap: 10px; background: #f4f5ec; }
+.perfil-info-col { flex: 1; padding: 10px 12px 8px 24px; display: flex; flex-direction: column; gap: 10px; background: #181414; }
 .perfil-nome-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.perfil-nome { font-size: 22px; font-weight: 900; color: #1b2e1a; line-height: 1.1; }
-.perfil-email { font-size: 13px; font-weight: 600; color: #6a8060; margin-top: -4px; }
+.perfil-nome { font-size: 22px; font-weight: 900; color: #ffffff; line-height: 1.1; }
+.perfil-email { font-size: 13px; font-weight: 600; color: #a89f9f; margin-top: -4px; }
 .perfil-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.perfil-stat { background: #e8eedc; border: 1px solid #c8d8a8; border-radius: 6px; padding: 8px 4px; text-align: center; }
-.perfil-stat-num { font-size: 16px; font-weight: 900; color: #1b2e4b; line-height: 1; }
-.perfil-stat-lbl { font-size: 9.5px; font-weight: 700; color: #6a8060; margin-top: 3px; }
-.perfil-bio { font-size: 13.5px; font-weight: 600; color: #4a5a40; line-height: 1.6; }
+.perfil-stat { background: #241c1c; border: 1px solid #382a2a; border-radius: 6px; padding: 8px 4px; text-align: center; }
+.perfil-stat-num { font-size: 16px; font-weight: 900; color: #ffffff; line-height: 1; }
+.perfil-stat-lbl { font-size: 9.5px; font-weight: 700; color: #a89f9f; margin-top: 3px; }
+.perfil-bio { font-size: 13.5px; font-weight: 600; color: #d6c6c6; line-height: 1.6; }
 .perfil-social-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
 
 .perfil-social-btn, .modal-btn, .btn-custom {
   border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;
-  cursor: pointer; text-decoration: none; transition: transform 0.15s, opacity 0.15s;
+  cursor: pointer; text-decoration: none; transition: transform 0.15s, opacity 0.15s, background 0.15s, border-color 0.15s, color 0.15s;
 }
 .perfil-social-btn {
-  height: 34px; padding: 0 14px; border: 1.5px solid #c0cfa8; background: #eaf0dc;
-  gap: 6px; color: #2d5a20; font-size: 13px; font-weight: 700;
+  height: 34px; padding: 0 14px; border: 1.5px solid #382a2a; background: #241c1c;
+  gap: 6px; color: #ff6b6b; font-size: 13px; font-weight: 700;
 }
-.perfil-social-btn:hover { background: #2d7d46; color: white; border-color: #2d7d46; transform: translateY(-2px); }
+.perfil-social-btn:hover { background: #b71c1c; color: white; border-color: #b71c1c; transform: translateY(-2px); }
 .perfil-social-btn i { font-size: 16px; }
 
 .modal-btn { padding: 10px 18px; font-size: 13.5px; border: 1px solid transparent; }
 .modal-btn:hover { transform: translateY(-1px); }
-.modal-btn.primary { background: #2d7d46; color: white; border-color: #1e5c32; }
-.modal-btn.secondary { background: transparent; color: #2d5a20; border-color: #a0b880; }
+.modal-btn.primary { background: #b71c1c; color: white; border-color: #8e0000; }
+.modal-btn.secondary { background: transparent; color: #ff6b6b; border-color: #ff6b6b; }
+.modal-btn.secondary:hover { background: #241c1c; border-color: #ff6b6b; }
 
 .modal-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
 .modal-tag, .tag-new {
   padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 700;
-  background: #d4e8c0; color: #2d5a20; border: 1px solid #b0cc90;
+  background: #241c1c; color: #ff6b6b; border: 1px solid #382a2a;
 }
 .modal-tag.dark { background: #1b2e4b; color: #a0c8d0; border-color: #2a4060; }
-.tag-new { background: #e1f0da; border: 1.5px solid #4fae5e; color: #1b2e1a; padding: 5px 12px; border-radius: 8px; font-size: 13px; }
+.tag-new { background: #241c1c; border: 1.5px solid #ff6b6b; color: #ff6b6b; padding: 5px 12px; border-radius: 8px; font-size: 13px; }
 
 /* ==========================================================================
    7. RESPONSIVIDADE
    ========================================================================== */
 
-/* Telas Grandes */
 @media (min-width: 1400px) {
   .desktop { padding: 48px 64px 100px; }
   .icon-grid { gap: 40px; }
@@ -246,7 +254,6 @@ body {
   .icon-label { font-size: 12px; }
 }
 
-/* Tablets e Notebooks Pequenos */
 @media (max-width: 768px) {
   .desktop { padding: 26px 22px 90px; background-position: 75% center; }
   .icon-grid { gap: 24px; }
@@ -255,16 +262,15 @@ body {
   .modal { 
     max-width: 100%; 
     width: 100%; 
-    min-height: auto; /* O SEGREDO: Remove os 100vh que estavam quebrando o topo */
-    max-height: 92vh; /* Limita a altura para deixar um respiro no topo da tela */
-    border-radius: 12px 12px 0 0; /* Arredonda as pontas de cima */
+    min-height: auto; 
+    max-height: 92vh; 
+    border-radius: 12px 12px 0 0; 
     border-bottom: none; 
   }
   .modal-body { padding: 20px; }
   .modal-overlay { padding: 0; align-items: flex-end; }  
 }
 
-/* Celulares */
 @media (max-width: 480px) {
   .desktop { padding: 20px 16px 100px; }
   .desktop-title { font-size: 11px; letter-spacing: 1px; margin-bottom: 18px; }
@@ -273,7 +279,6 @@ body {
   .folder-svg { width: 46px; height: 37px; }
   .icon-label { font-size: 10px; }
 
-  /* Ajuste do Perfil */
   .perfil-wrap { flex-direction: column; align-items: center; }
   .perfil-foto img { height: 200px; }
   .perfil-foto-placeholder { min-height: 200px; }
@@ -281,27 +286,23 @@ body {
   .perfil-stats-grid { grid-template-columns: repeat(4, 1fr); gap: 4px; }
   .perfil-stat-num { font-size: 14px; }
 
-  /* Taskbar limpa e centralizada sem relógio */
   .taskbar {
-    position: fixed; left: 0; right: 0; bottom: 0;
-    padding: 6px; min-height: auto;
-    flex-wrap: nowrap; justify-content: center; gap: 16px; z-index: 10;
+    position: fixed; left: 50%; right: auto; bottom: 10px;
+    padding: 8px 16px; gap: 12px; z-index: 10;
   }
   .dock-item { gap: 4px; flex-shrink: 0; }
-  .dock-icon { width: 44px !important; height: 44px !important; border-radius: 10px; flex-shrink: 0; overflow: hidden; }
-  .dock-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .dock-icon { width: 44px !important; height: 44px !important; border-radius: 50%; flex-shrink: 0; }
   .dock-label { font-size: 9.5px; text-align: center; }
   .clock { display: none !important; }
 
-  /* Ajustes da Janela */
   .win-titlebar { padding: 10px 8px 10px 14px; }
   .win-titlebar-name { font-size: 13.5px; }
   .win-btn { width: 30px; height: 26px; }
   .modal { 
     max-width: 100%; 
     width: 100%; 
-    min-height: auto; /* Garante que o erro não volte nos celulares menores */
-    max-height: 90vh; /* Deixa 10% da tela de respiro no topo para ver o papel de parede */
+    min-height: auto; 
+    max-height: 90vh; 
     border-radius: 15px 15px 0 0; 
     border-bottom: none; 
   }
@@ -311,12 +312,12 @@ body {
   .modal-btn { justify-content: center; width: 100%; }
 }
 
-/* Telas muito pequenas */
 @media (max-width: 360px) {
   .icon-grid { justify-content: center; gap: 14px; }
   .icon { width: 58px; }
   .folder-svg { width: 42px; height: 34px; }
 }
+
 /* ==========================================================================
    8. NOVO LAYOUT DE CASE STUDY
    ========================================================================== */
@@ -329,11 +330,10 @@ body {
 
 .case-carousel-wrap {
   width: 100%;
-  background: #f0f4e8;
-  border-bottom: 1.5px solid #d0daba;
+  background: #181414;
+  border-bottom: 1.5px solid #382a2a;
 }
 
-/* O carrossel é usado dentro do novo layout, então seus estilos foram movidos para cá */
 .project-carousel {
   position: relative;
   display: flex;
@@ -355,7 +355,7 @@ body {
   height: 340px;
   border-radius: 0;
   border: none;
-  background: #f0f4e8;
+  background: #181414;
 }
 .case-content {
   padding: 24px 28px 28px;
@@ -387,36 +387,36 @@ body {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.5px;
-  background: #d4edda;
-  color: #1a5c2a;
-  border: 1px solid #a8d8b0;
+  background: #241c1c;
+  color: #ff6b6b;
+  border: 1px solid #382a2a;
   width: fit-content;
   text-transform: uppercase;
 }
 .case-type-badge--web { 
-  background: #f1c4c4; 
-  color: #7a1a1a; 
-  border-color: #7a1a1a;
+  background: #241c1c; 
+  color: #ff6b6b; 
+  border-color: #382a2a;
   margin-bottom: 4px;
 }
 .case-type-badge--health { 
-  background: #fde8e8; 
-  color: #7a1a1a; 
-  border-color: #f0b8b8;
+  background: #241c1c; 
+  color: #ff6b6b; 
+  border-color: #382a2a;
   margin-bottom: 4px;
 }
 
 .case-title {
   font-size: 22px;
   font-weight: 900;
-  color: #1b2e1a;
+  color: #ffffff;
   line-height: 1.1;
   margin: 0;
 }
 
 .case-subtitle {
   font-size: 13.5px;
-  color: #5a7050;
+  color: #a89f9f;
   line-height: 1.4;
   margin: 0;
   font-weight: 600;
@@ -459,16 +459,16 @@ body {
   border-radius: 6px;
   font-size: 12px;
   font-weight: 700;
-  background: #e8f0dc;
-  color: #2d5a20;
-  border: 1px solid #b8d09a;
+  background: #241c1c;
+  color: #ff6b6b;
+  border: 1px solid #382a2a;
 }
 
 .case-blocks {
   display: flex;
   flex-direction: column;
   gap: 0;
-  border: 1.5px solid #d8e4c4;
+  border: 1.5px solid #382a2a;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -478,13 +478,13 @@ body {
   align-items: flex-start;
   gap: 12px;
   padding: 14px 16px;
-  border-bottom: 1px solid #dce8c8;
-  background: #fafcf7;
+  border-bottom: 1px solid #382a2a;
+  background: #1e1717;
   transition: background 0.12s;
 }
 
 .case-block:last-child { border-bottom: none; }
-.case-block:hover { background: #f0f5e8; }
+.case-block:hover { background: #2a2020; }
 
 .case-block-icon {
   font-size: 18px;
@@ -504,17 +504,18 @@ body {
 .case-block-label {
   font-size: 11px;
   font-weight: 800;
-  color: #3a7a3a;
+  color: #ff6b6b;
   text-transform: uppercase;
   letter-spacing: 0.6px;
 }
 
 .case-block-desc {
   font-size: 13.5px;
-  color: #2c3827;
+  color: #d6c6c6;
   line-height: 1.55;
   font-weight: 600;
 }
+
 /* Animação e controles do carrossel */
 @keyframes fadeInSlide {
   from { opacity: 0.3; transform: scale(0.98); }
@@ -529,9 +530,9 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(36, 96, 48, 0.7); /* Cor de fundo mais escura */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
-  color: white; /* Ícone branco para contraste */
+  background: rgba(183, 28, 28, 0.7); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  color: white; 
   cursor: pointer;
   user-select: none;
   border-radius: 50%;
@@ -543,24 +544,22 @@ body {
   transition: background 0.15s;
 }
 .carousel-arrow i.ti {
-  stroke-width: 2.5; /* Aumenta a espessura da seta */
-  font-size: 22px;   /* Ajusta o tamanho do ícone */
-  line-height: 1;    /* Garante o alinhamento vertical perfeito */
+  stroke-width: 2.5; 
+  font-size: 22px;   
+  line-height: 1;    
 }
-.carousel-arrow:hover { background: rgba(36, 96, 48, 0.9); }
+.carousel-arrow:hover { background: rgba(183, 28, 28, 0.9); }
 .carousel-arrow.left { left: 12px; }
 .carousel-arrow.right { right: 12px; }
 
 .carousel-dots {
-  position: absolute; bottom: 10px; background: #246030; padding: 4px 10px;
+  position: absolute; bottom: 10px; background: #b71c1c; padding: 4px 10px;
   border-radius: 20px; display: flex; gap: 6px;
 }
 .carousel-dots span {
   width: 7px; height: 7px; background: white; border-radius: 50%; display: inline-block; opacity: 0.4;
 }
 .carousel-dots span.active { opacity: 1; }
-
-
 
 /* ==========================================================================
    9. RESPONSIVIDADE DO CASE STUDY
@@ -586,4 +585,82 @@ body {
   .case-block-desc { font-size: 12.5px; }
   .case-block-label { font-size: 10px; }
   .case-tag { font-size: 11px; padding: 3px 9px; }
+}
+
+/* ==========================================================================
+   10. MELHORIAS — DOCK, ÍCONES E BOTÕES (SVG inline, sem dependência de CDN)
+   ========================================================================== */
+
+.dock-icon {
+  width: 52px; height: 52px; border-radius: 50%; color: #fff;
+  background: #4a0000;
+  border: none; box-shadow: none;
+  transition: background 0.15s;
+}
+.dock-icon svg { width: 26px; height: 26px; }
+.dock-item:hover .dock-icon { background: #730000; }
+.dock-item:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 10px; }
+
+.case-block-icon {
+  width: 34px; height: 34px; border-radius: 9px; margin-top: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: #241c1c; color: #ff6b6b; border: 1px solid #382a2a;
+}
+.case-block-icon svg { width: 18px; height: 18px; }
+
+.case-btn svg { flex-shrink: 0; }
+.case-btn:focus-visible, .modal-btn:focus-visible, .win-btn:focus-visible, .carousel-arrow:focus-visible { outline: 2px solid #ff6b6b; outline-offset: 2px; }
+
+.modal-btn { gap: 8px; font-weight: 800; }
+.modal-btn svg { flex-shrink: 0; }
+.modal-btn.secondary:hover { background: #241c1c; }
+
+.contact-ico { display: inline-flex; width: 28px; height: 28px; border-radius: 8px; background: #241c1c; color: #ff6b6b; border: 1px solid #382a2a; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-ico svg { width: 15px; height: 15px; }
+
+.carousel-arrow svg { width: 20px; height: 20px; stroke-width: 2.6; }
+
+.modal.maximized { max-width: 100%; max-height: 100%; height: 100%; border-radius: 0; }
+.modal-overlay:has(.modal.maximized) { padding: 0; }
+
+@media (max-width: 480px) {
+  .case-block-icon { width: 30px; height: 30px; }
+  .case-block-icon svg { width: 16px; height: 16px; }
+  .modal-btn { width: 100%; }
+}
+
+/* ==========================================================================
+   11. NOVOS ELEMENTOS — habilidades, contato, subtítulo das pastas, carrossel
+   ========================================================================== */
+
+.icon { cursor: pointer; }
+.icon:focus-visible { outline: 2px solid #b71c1c; outline-offset: 4px; border-radius: 8px; }
+
+.case-carousel-wrap .project-carousel { box-sizing: border-box; padding-bottom: 34px; }
+.carousel-dots { bottom: 8px; }
+
+.skill-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+.skill-group { background: #1e1717; border: 1px solid #382a2a; border-radius: 12px; padding: 14px; }
+.skill-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.skill-ico { width: 30px; height: 30px; border-radius: 8px; background: #241c1c; color: #ff6b6b; border: 1px solid #382a2a; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.skill-ico svg { width: 16px; height: 16px; }
+.skill-name { font-size: 13px; font-weight: 800; color: #ffffff; }
+.skill-group .modal-tags { margin-top: 0 !important; gap: 6px; }
+@media (max-width: 600px) { .skill-groups { grid-template-columns: 1fr; } }
+
+.contact-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.contact-row { display: flex; align-items: center; gap: 8px; }
+.contact-link { flex: 1; display: flex; align-items: center; gap: 10px; padding: 6px 10px 6px 6px; border-radius: 10px; font-size: 13px; font-weight: 700; color: #d6c6c6; text-decoration: none; border: 1px solid transparent; min-width: 0; word-break: break-all; transition: background 0.15s, border-color 0.15s; }
+.contact-link:hover, .contact-link:focus-visible { background: #241c1c; border-color: #382a2a; outline: none; }
+.copy-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 8px; border: 1px solid #382a2a; background: #241c1c; color: #ff6b6b; font: 800 12px 'Nunito', sans-serif; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+.copy-btn svg { width: 14px; height: 14px; }
+.copy-btn:hover { background: #2a2020; }
+.copy-btn.ok { background: #b71c1c; color: #fff; border-color: #b71c1c; }
+.copy-btn:focus-visible { outline: 2px solid #b71c1c; outline-offset: 2px; }
+
+.skill-group:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.modal-btn { white-space: nowrap; justify-content: center; }
+.modal-footer { flex-wrap: wrap; }
+@media (max-width: 480px) {
+  .modal-footer .modal-btn { flex: 1 1 auto; padding: 9px 10px; font-size: 12px; }
 }
